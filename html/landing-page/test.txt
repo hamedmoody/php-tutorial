@@ -1,0 +1,6 @@
+images/
+index.html
+jquery-3.7.1.min.js
+script.js
+style.css
+test.txt
