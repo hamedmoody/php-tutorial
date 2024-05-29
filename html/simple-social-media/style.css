@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    background: #ececec;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile {
+    width: 390px;
+    background: #E5E6F7;
+    margin: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    padding: 15px;
+}
+
+.card {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.card video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post-media {
+    margin: 5px 0;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-author p {
+}
+
+.post-time {
+    display: flex;
+}
+
+.author-meta h3 {
+    font-size: 16px;
+}
+
+.author-meta p {
+    font-size: 14px;
+    color: #7D7D7D;
+}
+
+.post-time p {
+    color: #7D7D7D;
+}
+
+.card header img {
+    border-radius: 9px;
+    background: white;
+    padding: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.post-content {
+    font-size: 15px;
+    line-height: 200%;
+    color: #424242;
+}
+
+.post-content a {
+    color: #E09900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-action {
+    background: #E9E9E9;
+    padding: 3px 5px;
+    color: #424242;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    gap: 3px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.likes img {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.likes img:hover{
+    z-index: 9;
+}
+
+.likes {
+    height: 24px;
+}
+
+.likes img:not(:first-child) {
+    margin-right: -18px;
+}
+
+.stories {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 15px;
+    direction: ltr;
+}
+
+.story {
+    text-align: center;
+    position: relative;
+}
+
+.stories .story:first-child:before{
+    content: "+";
+    position: absolute;
+    background: #e91e63;
+    width: 24px;
+    border-radius: 3px;
+    color: #FFF;
+    top: -5px;
+    right: -5px;
+}
+
+.story img {
+    border-radius: 6px;
+}
+
+.story p {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50px;
+}
