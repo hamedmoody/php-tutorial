@@ -27,7 +27,7 @@ body{
     background: #FFF;
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .card video {
@@ -44,6 +44,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .post-author {
@@ -139,6 +140,7 @@ body{
 .story {
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 
 .stories .story:first-child:before{
