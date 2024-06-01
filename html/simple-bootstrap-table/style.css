@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh;
+    font-size: 16px;
+
+}
