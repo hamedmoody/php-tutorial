@@ -1,2 +1,7 @@
-# php-tutorial
-PHP tutorial course exercise files
+# PHP Tutorial course files
+Welcome to **PHP Tutorial: Beginner to Advanced** course at [daneshjooyar.com](https://daneshjooyar.com)
+You can get this course from [here](https://www.daneshjooyar.com/php-tutorial/?utm_source=hamedmoody&utm_medium=github&utm_campaign=hamedmoody)
+
+[![PHP Tutorial](https://www.daneshjooyar.com/wp-content/uploads/2024/06/php-beginner-to-advanced.jpg)](https://www.daneshjooyar.com/php-tutorial/?utm_source=hamedmoody&utm_medium=github&utm_campaign=hamedmoody)
+
+
