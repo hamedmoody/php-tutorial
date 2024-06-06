@@ -109,3 +109,13 @@ footer#footer {
     border-radius: 8px;
     text-align: center;
 }
+
+.page-404 {
+    text-align: center;
+    font-size: 64px;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b9b9b;
+}
