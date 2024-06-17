@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    background: #e3e3e3;
+}
+
+.table-container {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 25px;
+}

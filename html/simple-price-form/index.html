@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>محاسبه قیمت پس از تخفیف</title>
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="https://daneshjooyar.com/php-tutorial/" class="course-url">
+            <img src="images/daneshjooyar-logo.svg" alt="Daneshjooyar" width="145" height="59">
+        </a>
+        <form action="" class="price-form">
+            <h3>محاسبه قیمت فروش</h3>
+            <p>
+                <label for="price">قیمت اصلی(ریال)</label>
+                <input type="text" id="price" name="price" placeholder="قیمت اصلی">
+            </p>
+            <p>
+                <label for="discount">درصد تخفیف</label>
+                <input type="text" id="discount" name="discount" placeholder="درصد تخفیف">
+            </p>
+            <p>
+                <label for="currency">واحد پولی نمایشی</label>
+                <select name="currency" id="currency">
+                    <option value="rial">ریال</option>
+                    <option value="tooman">تومان</option>
+                </select>
+            </p>
+            <button>محاسبه قیمت</button>
+        </form>
+        <div class="result">
+            <del>8,500,000</del>
+            <ins>7,500,000</ins>
+            <span class="percent">17%</span>
+        </div>
+    </div>
+</body>
+</html>

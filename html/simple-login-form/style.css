@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    background: #ececec;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 300px;
+    padding: 20px 0;
+}
+
+.price-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.price-form input,.price-form select
+{
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    font-family: 'YekanBakh', serif;
+    background: #eaeaea;
+    border-radius: 8px;
+    border: 1px solid #cacaca;
+}
+
+
+form.price-form {
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    background: #FFF;
+}
+
+h3{
+    text-align: center;
+}
+
+.result {
+    background: #FFF;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    margin-top: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.result.error{
+    color: red;
+}
+
+.result.success{
+    color: green;
+}
+
+form.price-form button {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'YekanBakh';
+    background: #2196f3;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form.price-form button:hover{
+    background: #1181d9;
+}
+
+.result del {
+    text-decoration: none;
+    color: red;
+    position: relative;
+    font-size: 15px;
+}
+
+.result del:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: red;
+    transform: rotate(-15deg);
+    top: 50%;
+}
+
+.result ins {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.result .percent {
+    background: red;
+    color: #FFF;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    left: 7px;
+    top: 10px;
+}
+
+a.course-url {
+    display: block;
+    text-align: center;
+}

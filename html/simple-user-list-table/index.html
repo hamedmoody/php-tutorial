@@ -1,0 +1,87 @@
+<!--
+<?php
+$users = [
+    ['name' => 'حسین', 'family' => 'اردلانی', 'age' => 32, 'phone' => '09104456789', 'status' => 'active'],
+    ['name' => 'رضا', 'family' => 'رحمانی', 'age' => 29, 'phone' => '09023458469', 'status' => 'active'],
+    ['name' => 'سجاد', 'family' => 'سعیدی', 'age' => 45, 'phone' => '09193459519', 'status' => 'inactive'],
+    ['name' => 'رسول', 'family' => 'جعفری', 'age' => 19, 'phone' => '09092586493', 'status' => 'active'],
+];
+?>
+-->
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Html in Loops</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="table-container">
+            <div class="table-filters mb-4 row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="search">جستجو</label>
+                        <input type="search" name="search" class="form-control" id="search">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="status">وضعیت</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="active">فعال</option>
+                            <option value="inactive">غیر فعال</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-hover table-striped table-responsive">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">نام</th>
+                    <th scope="col">نام خانوادگی</th>
+                    <th scope="col">تلفن</th>
+                    <th scope="col">سن</th>
+                    <th scope="col">وضعیت</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>حامد</td>
+                    <td>مودی</td>
+                    <td>09123456789</td>
+                    <td>32</td>
+                    <td>
+                        <span class="badge text-bg-success">فعال</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>علی</td>
+                    <td>رمضانی</td>
+                    <td>09123456789</td>
+                    <td>32</td>
+                    <td>
+                        <span class="badge text-bg-danger">غیرفعال</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>حسن</td>
+                    <td>رجبیان</td>
+                    <td>09123456789</td>
+                    <td>32</td>
+                    <td>
+                        <span class="badge text-bg-danger">غیرفعال</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
