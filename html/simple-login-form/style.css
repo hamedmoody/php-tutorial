@@ -122,3 +122,27 @@ a.course-url {
     display: block;
     text-align: center;
 }
+
+
+.password-box {
+    position: relative;
+}
+
+.password-box svg {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    cursor: pointer;
+}
+
+.password-box .hide-password {
+    display: none;
+}
+
+.password-box.show .hide-password {
+    display: block;
+}
+
+.password-box.show .show-password {
+    display: none;
+}
