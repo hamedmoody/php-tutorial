@@ -15,16 +15,17 @@ body{
 }
 
 .container {
-    width: 300px;
+    width: 320px;
     padding: 20px 0;
+    max-width: 95%;
 }
 
-.price-form label {
+.login-form label {
     display: block;
     margin-top: 15px;
 }
 
-.price-form input,.price-form select
+.login-form input,.login-form select
 {
     display: block;
     width: 100%;
@@ -37,7 +38,7 @@ body{
 }
 
 
-form.price-form {
+form.login-form {
     border-radius: 20px;
     padding: 15px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
@@ -66,7 +67,7 @@ h3{
     color: green;
 }
 
-form.price-form button {
+form.login-form button {
     text-align: center;
     width: 100%;
     margin-top: 10px;
@@ -80,7 +81,7 @@ form.price-form button {
     transition: 0.3s;
 }
 
-form.price-form button:hover{
+form.login-form button:hover{
     background: #1181d9;
 }
 
@@ -145,4 +146,21 @@ a.course-url {
 
 .password-box.show .show-password {
     display: none;
+}
+
+.logged-in-user {
+    background: #e8ffe8;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #008000;
+    border: 1px solid #87fc87;
+}
+
+.logged-in-user img {
+    width: 64px;
+    border-radius: 50%;
 }
