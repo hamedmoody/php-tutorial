@@ -16,3 +16,28 @@ body{
     border-radius: 15px;
     margin-top: 25px;
 }
+
+.pagination{
+    direction: ltr;
+    margin-top: 10px;
+}
+
+a.order {
+    position: relative;
+}
+
+a.order:before {
+    position: absolute;
+    right: -11px;
+    color: black;
+    font-weight: 300;
+}
+
+a.order.desc:after {
+    content: ">";
+    transform: rotate(-90deg);
+}
+a.order.desc:before {
+    content: ">";
+    transform: rotate(-90deg);
+}

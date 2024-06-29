@@ -5,6 +5,13 @@ $users = [
     ['name' => 'رضا', 'family' => 'رحمانی', 'age' => 29, 'phone' => '09023458469', 'status' => 'active'],
     ['name' => 'سجاد', 'family' => 'سعیدی', 'age' => 45, 'phone' => '09193459519', 'status' => 'inactive'],
     ['name' => 'رسول', 'family' => 'جعفری', 'age' => 19, 'phone' => '09092586493', 'status' => 'active'],
+    ['name' => 'اکبر', 'family' => 'اکبری', 'age' => 45, 'phone' => '09012586493', 'status' => 'active'],
+    ['name' => 'زهرا', 'family' => 'صادقی', 'age' => 18, 'phone' => '09062586493', 'status' => 'inactive'],
+    ['name' => 'موسی', 'family' => 'مسلمی', 'age' => 24, 'phone' => '09072586493', 'status' => 'active'],
+    ['name' => 'آرش', 'family' => 'مجد', 'age' => 15, 'phone' => '09042586493', 'status' => 'active'],
+    ['name' => 'جعفر', 'family' => 'پاسبان', 'age' => 44, 'phone' => '09062686493', 'status' => 'inactive'],
+    ['name' => 'مصطفی', 'family' => 'تقی پور', 'age' => 24, 'phone' => '09096586493', 'status' => 'active'],
+    ['name' => 'نیما', 'family' => 'جعفرپور', 'age' => 18, 'phone' => '09842586493', 'status' => 'active'],
 ];
 ?>
 -->
@@ -20,6 +27,7 @@ $users = [
 <body>
     <div class="container">
         <div class="table-container">
+
             <div class="table-filters mb-4 row">
                 <div class="col-3">
                     <div class="form-group">
@@ -36,7 +44,12 @@ $users = [
                         </select>
                     </div>
                 </div>
-            </div>
+                <div class="col-3">
+                    <br>
+                    <button class="btn btn-primary">اعمال فیلتر</button>
+                </div>
+            </div><!--.table-filters-->
+
             <table class="table table-hover table-striped table-responsive">
                 <thead>
                 <tr>
@@ -44,7 +57,11 @@ $users = [
                     <th scope="col">نام</th>
                     <th scope="col">نام خانوادگی</th>
                     <th scope="col">تلفن</th>
-                    <th scope="col">سن</th>
+                    <th scope="col">
+                        <a href="#" class="order">
+                            سن
+                        </a>
+                    </th>
                     <th scope="col">وضعیت</th>
                 </tr>
                 </thead>
@@ -81,7 +98,25 @@ $users = [
                 </tr>
                 </tbody>
             </table>
+
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
+
     </div>
 </body>
 </html>
