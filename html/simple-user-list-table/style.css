@@ -33,11 +33,11 @@ a.order:before {
     font-weight: 300;
 }
 
-a.order.desc:after {
-    content: ">";
-    transform: rotate(-90deg);
-}
 a.order.desc:before {
     content: ">";
     transform: rotate(-90deg);
+}
+a.order.asc:before {
+    content: ">";
+    transform: rotate(-270deg);
 }
