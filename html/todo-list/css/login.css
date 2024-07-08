@@ -25,6 +25,10 @@ a{
     text-decoration: none;
 }
 
+button,input, select{
+    font-family: 'YekanBakh', serif;
+}
+
 .login-container{
     background: #FFF;
     padding: 15px;
@@ -133,7 +137,6 @@ input.form-control{
     color: #FFF;
     display: flex;
     cursor: pointer;
-    font-family: 'YekanBakh', serif;
     width: 100%;
     align-items: center;
     justify-content: center;

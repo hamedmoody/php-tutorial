@@ -29,6 +29,11 @@ a{
     text-decoration: none;
 }
 
+button,input, select{
+    font-family: 'YekanBakh', serif;
+}
+
+
 .align-center{
     text-align: center;
 }
@@ -62,6 +67,7 @@ a{
     width: 96px;
     height: 96px;
     border-radius: 50%;
+    border: 2px solid white;
 }
 
 .menu a{
@@ -71,6 +77,11 @@ a{
     padding: 10px;
     border-radius: 8px;
     color: #FFF;
+    transition: 0.3s;
+}
+
+.menu a:not(.active):hover{
+    background: #ffffff21;
 }
 
 .menu a.active{
@@ -82,11 +93,16 @@ a{
     fill: #0071FF;
 }
 
+main h1{
+    margin-bottom: 15px;
+}
+
 /** Task Stats **/
 .task-stats{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    margin-bottom: 35px;
 }
 
 .task-stat{
@@ -302,3 +318,89 @@ a{
 }
 
 /** Task card **/
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+input.form-control,
+select.form-control{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.btn{
+    background: var(--color-primary);
+    color: #FFF;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+.btn:hover{
+    background: var(--color-primary-hover);
+}
+
+
+form.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-4 {
+    width: calc( 100% / 3 );
+}
+
+.col {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.message{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.message.error svg{
+    width: 20px;
+    height: 20px;
+}
+.message.error{
+    background: #FFD9D9;
+    color: #FE0000;
+    border: 1px solid #FE0000;
+}
+
+.message.error svg path{
+    stroke: #FE0000;
+}
+
+
+.message.success{
+    background: #D9FFED;
+    color: #00954F;
+    border: 1px solid #00954F;
+}
+.message.success svg path{
+    stroke: #00954F;
+}
+
