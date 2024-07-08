@@ -23,6 +23,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 15px;
 }
 
 a{
@@ -185,6 +186,11 @@ main h1{
     border-radius: 10px;
     color: #0071FF;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    transition: 0.3s;
+}
+
+.widget header a:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0);
 }
 
 /** Task card **/
