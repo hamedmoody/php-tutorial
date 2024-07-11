@@ -341,7 +341,10 @@ select.form-control{
     padding: 15px 10px;
     box-sizing: border-box;
 }
-
+.date-field{
+    direction: ltr;
+    text-align: left;
+}
 .btn{
     background: var(--color-primary);
     color: #FFF;
