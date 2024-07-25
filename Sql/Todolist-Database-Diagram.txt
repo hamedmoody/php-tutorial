@@ -1,0 +1,26 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+Table users{
+  ID integer [primary key]
+  username varchar
+  password varchar
+  name varchar
+  family varchar
+  photo varchar
+  phone varchar
+  register_date datetime
+}
+
+Table tasks{
+  ID integer [primary key]
+  user_id integer
+  title varchar
+  content text
+  status varchar
+  percent integer
+  due_date datetime
+  created_at datetime
+  updated_at datetime
+}
+
+Ref: "users"."ID" < "tasks"."user_id"
