@@ -1,0 +1,77 @@
+Table "categories" {
+  "ID" bigint [pk, not null]
+  "title" varchar(250) [not null]
+  "item_count" int [not null]
+}
+
+Table "orders" {
+  "ID" bigint [pk, not null]
+  "user_id" bigint [not null]
+  "total" int [not null]
+  "subtotal" int [not null]
+  "status" varchar(40) [not null, default: "pending"]
+  "gateway" varchar(40) [not null]
+  "reference_id" varchar(20) [default: NULL, note: 'gateway recieve code']
+  "created_at" datetime [not null]
+  "completed_at" datetime [default: NULL]
+}
+
+Table "order_items" {
+  "ID" bigint [pk, not null]
+  "order_id" bigint [not null]
+  "product_id" bigint [not null]
+  "qantity" smallint [not null]
+  "price" int [not null]
+  "sale_price" int [not null]
+  "created_at" datetime [not null]
+}
+
+Table "products" {
+  "ID" bigint [pk, not null]
+  "title" varchar(100) [not null]
+  "content" text [not null]
+  "thumbnail" varchar(250) [not null]
+  "price" int [not null]
+  "discount_percent" tinyint [not null, default: "0"]
+  "discount_date" datetime [default: NULL]
+  "total_sale" bigint [not null, default: "0"]
+  "sale_count" mediumint [not null, default: "0"]
+  "stock" int [not null]
+  "created_at" datetime [not null]
+}
+
+Table "product_categories" {
+  "ID" int [pk, not null]
+  "product_id" bigint [not null]
+  "category_id" bigint [not null]
+}
+
+Table "users" {
+  "ID" bigint [pk, not null]
+  "username" varchar(40) [not null]
+  "password" varchar(50) [not null]
+  "email" varchar(100) [not null]
+  "name" varchar(100) [not null]
+  "family" varchar(100) [not null]
+  "phone" varchar(11) [not null]
+  "photo" varchar(250) [not null]
+  "country" varchar(100) [not null]
+  "state" varchar(100) [not null]
+  "city" varchar(100) [not null]
+  "address" text [not null]
+  "zip_code" varchar(10) [not null]
+  "total_order" bigint [not null, default: "0"]
+  "order_count" int [not null, default: "0"]
+  "register_date" datetime [not null]
+}
+
+
+Ref: "order_items"."product_id" < "products"."ID"
+
+Ref: "order_items"."order_id" < "orders"."ID"
+
+Ref: "orders"."user_id" < "users"."ID"
+
+Ref: "product_categories"."product_id" < "products"."ID"
+
+Ref: "product_categories"."category_id" < "categories"."ID"
