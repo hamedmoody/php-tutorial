@@ -1,0 +1,20 @@
+SELECT
+    order_items.ID,
+    orders.user_id,
+    CONCAT( users.name, ' ', users.family ) AS fullname,
+    order_items.product_id,
+    products.title,
+    products.thumbnail,
+    order_items.quantity AS qty,
+    order_items.price,
+    order_items.sale_price,
+    ROUND( ( order_items.price - order_items.sale_price ) / order_items.price * 100 ) AS discount,
+    order_items.order_id,
+    orders.gateway,
+    orders.completed_at AS sold_at
+FROM
+    order_items
+INNER JOIN products ON order_items.product_id = products.ID
+INNER JOIN orders ON ( order_items.order_id = orders.ID )
+INNER JOIN users ON ( orders.user_id = users.ID )
+WHERE orders.status = 'complete';
