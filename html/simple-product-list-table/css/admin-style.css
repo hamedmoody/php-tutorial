@@ -1,6 +1,6 @@
 :root {
     --color-primary: #1960e9;
-    --color-primary-hover: #1458da;
+    --color-primary-hover: #005ca9;
     --color-green: #24b25d;
     --color-red: #ff003e;
     --border-radius-table-row: 10px;
@@ -27,7 +27,11 @@ input, textarea, button, select {
     font-family: YekanBakh, serif;
 }
 
-.table-container {
+.w-100{
+    width: 100%;
+}
+
+.box-container {
     background: #FFF;
     border-radius: 15px;
     padding: 20px;
@@ -37,13 +41,13 @@ input, textarea, button, select {
     margin-bottom: 25px;
 }
 
-.table-container header {
+.box-container header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.table-container .title p {
+.box-container .title p {
     color: #b8b8b8;
 }
 
@@ -63,6 +67,15 @@ input, textarea, button, select {
 
 .btn-primary:hover {
     background-color: var(--color-primary-hover);
+}
+
+.btn-secondary{
+    background: #e0e0e0;
+    color: #5d5d5d;
+}
+
+.btn-secondary:hover{
+    background: #efefef;
 }
 
 .table {
@@ -258,13 +271,14 @@ a.btn-icon.delete-product {
     display: flex;
     align-items: center;
     margin-top: 20px;
-    gap: 15px;
+    gap: 20px;
 }
 
 .form-control {
-    padding: 5px;
+    padding: 10px;
     border-radius: 8px;
     border: 1px solid #d0cece;
+    box-sizing: border-box;
 }
 
 .table-filter .filter {
@@ -282,4 +296,73 @@ a.btn-icon.delete-product {
     width: 110px;
     direction: ltr;
     text-align: center;
+}
+
+#product-register{
+    margin-top: 25px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group .form-control{
+    width: 100%;
+}
+
+form#product-register {
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+
+.message {
+    border-radius: 15px;
+    margin-top: 15px;
+    border: 1px solid;
+    position: relative;
+    padding: 15px 36px 15px 15px;
+}
+
+.message:before{
+    content: "";
+    background: url("../images/success-filled.svg") no-repeat;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: calc( 50% - 12px );
+    right: 8px;
+}
+
+.message.error{
+    color: red;
+    background: #fff4f4;
+    border-color: #ffc8c8;
+}
+
+.message.error:before{
+    background-image: url("../images/error-filled.svg");
+}
+
+.message.success{
+    background: #f1f8f4;
+    border-color: #cbe6cf;
+    color: green;
+}
+
+.thumbnail.contain-image label{
+    display: none;
+}
+
+.thumbnail-preview{
+    width: 100%;
 }
