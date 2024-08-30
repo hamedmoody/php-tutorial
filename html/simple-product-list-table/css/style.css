@@ -98,11 +98,11 @@ input, textarea, button, select {
     gap: 3px;
 }
 
-th a.order-desc g path:last-child {
+th a.order-desc g path:first-child {
     fill: var(--color-primary);
 }
 
-th a.order-asc g path:first-child {
+th a.order-asc g path:last-child {
     fill: var(--color-primary);
 }
 
