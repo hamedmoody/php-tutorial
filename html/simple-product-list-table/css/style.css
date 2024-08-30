@@ -195,7 +195,8 @@ ins {
     background: #24b25d;
 }
 
-.product-status.pending {
+.product-status.pending,
+.product-status.presale{
     background: #e3822b;
 }
 
