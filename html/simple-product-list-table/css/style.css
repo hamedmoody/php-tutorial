@@ -243,6 +243,7 @@ a.btn-icon.delete-product {
     display: flex;
     gap: 5px;
     direction: ltr;
+    flex-wrap: wrap;
 }
 
 .pagination > * {
