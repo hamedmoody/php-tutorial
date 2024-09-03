@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    background: #e3e3e3;
+}
+
+.table-container {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.pagination{
+    direction: ltr;
+    margin-top: 10px;
+}
+
+a.order {
+    position: relative;
+}
+
+a.order:before {
+    position: absolute;
+    right: -11px;
+    color: black;
+    font-weight: 300;
+}
+
+a.order.desc:before {
+    content: ">";
+    transform: rotate(-90deg);
+}
+a.order.asc:before {
+    content: ">";
+    transform: rotate(-270deg);
+}
