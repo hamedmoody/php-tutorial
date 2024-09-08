@@ -43,7 +43,7 @@ button,input, select{
     margin: auto;
 }
 
-.login-container .error{
+.login-container .message{
     background: #FFD9D9;
     color: #FE0000;
     border-radius: 8px;
@@ -62,6 +62,15 @@ button,input, select{
 
 .login-container .error svg path{
     stroke: #FE0000;
+}
+
+.message.success{
+    background: #D9FFED;
+    color: #00954F;
+    border: 1px solid #00954F;
+}
+.message.success svg path{
+    stroke: #00954F;
 }
 
 .login-container h1{

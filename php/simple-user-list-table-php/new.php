@@ -15,7 +15,7 @@ $page_title = 'ثبت کاربر جدید';
                 <input type="text" name="name" class="form-control" id="name" value="">
             </div>
             <div class="form-group">
-                <label for="wallet">مبغ کیف پول </label>
+                <label for="wallet">مبلغ کیف پول </label>
                 <input type="number" name="wallet" class="form-control" id="wallet" value="">
             </div>
             <div class="form-group">

@@ -1,5 +1,6 @@
 <?php include( 'header.php' );?>
     <?php
+
         $search = isset( $_GET['search'] ) ? $_GET['search'] : '';
         $where  = ' WHERE 1 = 1 ';
         if( $search ){
