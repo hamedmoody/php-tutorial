@@ -1,0 +1,415 @@
+:root{
+    --color-primary: #304ACA;
+    --color-primary-hover: #1d39c0;
+    --color-doing: 162, 0, 255;
+    --color-done: 0, 149, 79;
+    --color-queue: 150, 112, 16;
+    --color-expire: 101, 101, 101;
+    --size-login-width: 320px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background: url("../images/mountains.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+button,input, select{
+    font-family: 'YekanBakh', serif;
+}
+
+
+.align-center{
+    text-align: center;
+}
+
+.panel-container{
+    background: #FFF;
+    width: 1280px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 280px auto;
+    gap: 15px;
+    padding: 15px;
+}
+.panel-container aside{
+    background: #0071FF;
+    color: #FFF;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.panel-logo img{
+    margin: auto;
+    display: block;
+}
+
+.profile{
+    margin: 15px 0;
+}
+
+.profile img{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.menu a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #FFF;
+    transition: 0.3s;
+}
+
+.menu a:not(.active):hover{
+    background: #ffffff21;
+}
+
+.menu a.active{
+    background: #FFF;
+    color: #0071FF;
+}
+
+.menu a.active svg path{
+    fill: #0071FF;
+}
+
+main h1{
+    margin-bottom: 15px;
+}
+
+/** Task Stats **/
+.task-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 35px;
+}
+
+.task-stat{
+    background: red;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.task-stat span{
+    font-size: 36px;
+    background: blue;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.task-stat.doing{
+    background: rgba(var(--color-doing), 0.16);
+    color: rgb(var(--color-doing));
+}
+
+.task-stat.doing span{
+    background: rgb(var(--color-doing));
+}
+
+.task-stat.done{
+    background: rgba(var(--color-done), 0.16);
+    color: rgb(var(--color-done));
+}
+
+.task-stat.done span{
+    background: rgb(var(--color-done));
+}
+
+.task-stat.queue{
+    background: rgba(var(--color-queue), 0.16);
+    color: rgb(var(--color-queue));
+}
+
+.task-stat.queue span{
+    background: rgb(var(--color-queue));
+}
+
+.task-stat.expire{
+    background: rgba(var(--color-expire), 0.16);
+    color: rgb(var(--color-expire));
+}
+
+.task-stat.expire span{
+    background: rgb(var(--color-expire));
+}
+/** Task Stats **/
+
+.widget{
+    margin-top: 25px;
+}
+
+.widget header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.widget header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.widget header a {
+    border: 1px solid #CBCBCB;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #0071FF;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    transition: 0.3s;
+}
+
+.widget header a:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0);
+}
+
+/** Task card **/
+.widget-body {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr );
+    gap: 15px;
+}
+
+.task-card {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 15px;
+    color: #707070;
+}
+
+.task-card .progress {
+    display: grid;
+    grid-template-columns: 48px auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-card .progress-bar {
+    background: #F3F3F3;
+    height: 8px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.task-card .progress span {
+    font-weight: 700;
+    text-align: center;
+}
+
+.task-card .progress-bar div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+}
+
+.task-card .task-title {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.task-card footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-info {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.task-info span {
+    color: #CCCCCC;
+}
+
+.task-info .task-status {
+    padding: 2px 10px;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+
+.task-card.doing{
+    border-color: rgb(var(--color-doing));
+}
+.task-card.doing .progress-bar div {
+    background: rgb(var(--color-doing));
+}
+.task-card.doing .progress span{
+    color: rgb(var(--color-doing));
+}
+.task-card.doing .task-info .task-status{
+    color: rgb(var(--color-doing));
+    background: rgba(var(--color-doing), .16)
+}
+
+
+.task-card.done{
+    border-color: rgb(var(--color-done));
+}
+.task-card.done .progress-bar div {
+    background: rgb(var(--color-done));
+}
+.task-card.done .progress span{
+    color: rgb(var(--color-done));
+}
+.task-card.done .task-info .task-status{
+    color: rgb(var(--color-done));
+    background: rgba(var(--color-done), .16)
+}
+
+
+.task-card.queue{
+    border-color: rgb(var(--color-queue));
+}
+.task-card.queue .progress-bar div {
+    background: rgb(var(--color-queue));
+}
+.task-card.queue .progress span{
+    color: rgb(var(--color-queue));
+}
+.task-card.queue .task-info .task-status{
+    color: rgb(var(--color-queue));
+    background: rgba(var(--color-queue), .16)
+}
+
+
+.task-card.expire{
+    border-color: rgb(var(--color-expire));
+}
+.task-card.expire .progress-bar div {
+    background: rgb(var(--color-expire));
+}
+.task-card.expire .progress span{
+    color: rgb(var(--color-expire));
+}
+.task-card.expire .task-info .task-status{
+    color: rgb(var(--color-expire));
+    background: rgba(var(--color-expire), .16)
+}
+
+/** Task card **/
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+input.form-control,
+select.form-control{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+.date-field{
+    direction: ltr;
+    text-align: left;
+}
+.btn{
+    background: var(--color-primary);
+    color: #FFF;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+.btn:hover{
+    background: var(--color-primary-hover);
+}
+
+
+form.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-4 {
+    width: calc( 100% / 3 );
+}
+
+.col {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.message{
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.message.error svg{
+    width: 20px;
+    height: 20px;
+}
+.message.error{
+    background: #FFD9D9;
+    color: #FE0000;
+    border: 1px solid #FE0000;
+}
+
+.message.error svg path{
+    stroke: #FE0000;
+}
+
+
+.message.success{
+    background: #D9FFED;
+    color: #00954F;
+    border: 1px solid #00954F;
+}
+.message.success svg path{
+    stroke: #00954F;
+}
+

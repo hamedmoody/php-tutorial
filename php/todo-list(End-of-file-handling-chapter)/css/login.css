@@ -1,0 +1,161 @@
+:root{
+    --color-primary: #304ACA;
+    --color-primary-hover: #1d39c0;
+    --size-login-width: 320px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh, serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background: url("../images/mountains.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
+
+button,input, select{
+    font-family: 'YekanBakh', serif;
+}
+
+.login-container{
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    width: var(--size-login-width);
+    max-width: 95%;
+    margin: 20px 0;
+}
+
+.login-logo{
+    display: block;
+    margin: auto;
+}
+
+.login-container .error{
+    background: #FFD9D9;
+    color: #FE0000;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #FE0000;
+}
+
+.login-container .error svg{
+    width: 20px;
+    height: 20px;
+}
+
+.login-container .error svg path{
+    stroke: #FE0000;
+}
+
+.login-container h1{
+    color: #373737;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.login-container .switch-group{
+    margin-bottom: 15px;
+}
+.login-container .switch-group input{
+    display: none;
+}
+
+.login-container .switch-group label{
+    position: relative;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.login-container .switch-group label:before{
+    content: "";
+    background: #FFF;
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 16px;
+    top: calc( 50% - 7.5px );
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.16);
+    transition: 0.3s ease-in-out;
+}
+
+.login-container .switch-group label:after{
+    content: "";
+    background: #9f9f9f;
+    position: absolute;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    top: calc( 50% - 6px );
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+.login-container .switch-group input:checked + label:before{
+    background: #00D87A;
+}
+
+.login-container .switch-group input:checked + label:after{
+    right: 15px;
+    background: #FFF;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+input.form-control{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E9E9E9;
+    padding: 15px 10px;
+    box-sizing: border-box;
+}
+
+.btn{
+    background: var(--color-primary);
+    color: #FFF;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+.btn:hover{
+    background: var(--color-primary-hover);
+}
+
+.about-course{
+    display: flex;
+    font-size:14px;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    font-weight: 300;
+    width: var(--size-login-width);
+}
