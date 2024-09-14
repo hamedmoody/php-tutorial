@@ -42,9 +42,10 @@ button,input, select{
 .panel-container{
     background: #FFF;
     width: 1280px;
+    max-width: 98%;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 280px auto;
+    grid-template-columns: 240px auto;
     gap: 15px;
     padding: 15px;
 }
