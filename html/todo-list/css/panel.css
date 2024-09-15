@@ -364,7 +364,7 @@ select.form-control{
 }
 
 
-form.row {
+.row {
     display: flex;
     flex-wrap: wrap;
 }
@@ -375,6 +375,14 @@ form.row {
 
 .col-4 {
     width: calc( 100% / 3 );
+}
+
+.col-9 {
+    width: calc( 100% * .75 );
+}
+
+.col-3 {
+    width: calc( 100% * .25 );
 }
 
 .col {
@@ -414,3 +422,14 @@ form.row {
     stroke: #00954F;
 }
 
+.profile-photo{
+    width: 142px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+input.ltr{
+    text-align: left;
+    direction: ltr;
+}
