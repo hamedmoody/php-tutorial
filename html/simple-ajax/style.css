@@ -1,0 +1,88 @@
+:root {
+    --color-primary: #0079E2;
+    --color-primary-hover: #0062b7;
+    --color-secondary: #E35B17;
+    --color-secondary-light: #ffede5;
+    --color-primary-rgb: 0,121,226;
+    --color-secondary-rgb: 227,91,23;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh;
+    font-size: 16px;
+    background: #ececec;
+    min-height: 100vh;
+}
+
+button,input{
+    font-family: YekanBakh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: #FFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:before {
+    content: "";
+    background: url('spinner.svg') center/100% no-repeat;
+    width: 0;
+    height: 24px;
+    transition: .3s
+}
+
+.btn.loading:before{
+    width: 24px;
+}
+
+.btn.btn-primary {
+    background: var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn.btn-secondary {
+    background: #FFF;
+    color: var(--color-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.btn.btn-secondary:hover{
+    background: var(--color-secondary-light);
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-content{
+    margin: 15px 0;
+    border: 1px dashed #818181;
+    padding: 15px;
+    border-radius: 8px;
+}
