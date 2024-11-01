@@ -1,0 +1,224 @@
+:root {
+    --color-primary: #0079E2;
+    --color-primary-hover: #0062b7;
+    --color-secondary: #E35B17;
+    --color-secondary-light: #ffede5;
+    --color-primary-rgb: 0,121,226;
+    --color-secondary-rgb: 227,91,23;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh;
+    font-size: 16px;
+    background: #ececec;
+    min-height: 100vh;
+}
+
+input,button{
+    font-family: YekanBakh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.widgets {
+    display: flex;
+    gap: 30px;
+}
+
+.widget {
+    background: #FFF;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    position: relative;
+    overflow: hidden;
+    animation: ske;
+}
+
+@keyframes skeleton {
+    0%{left: 0}
+    100%{left: -200%}
+}
+
+.widget:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300%;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(223 223 223) 50%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 13px;
+    animation: skeleton infinite 2s  alternate;
+}
+
+body.loading .widget:before{
+    visibility: visible;
+    opacity: 1;
+}
+
+.widget .widget-icon img {
+    width: 84px;
+    height: auto;
+}
+
+.widget-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: #FFF8B9;
+    border-radius: 0 15px 15px 0;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: #FFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:before {
+    content: "";
+    background: url('images/spinner.svg') center/100% no-repeat;
+    width: 0;
+    height: 24px;
+    transition: .3s
+}
+
+body.loading .btn:before{
+    width: 24px;
+}
+
+.btn.btn-primary {
+    background: var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+
+h2{
+    margin: 30px 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+span.last-update {
+    font-weight: 200;
+    font-size: 18px;
+    color: #606060;
+}
+
+.widget-body h3 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.widget-body p {
+    font-size: 20px;
+    font-weight: 600;
+    display: inline;
+    color: #4CAF50;
+}
+
+.widget-body p:after {
+    content: "ریال";
+    margin-right: 2px;
+    font-size: 18px;
+    color: #5b5b5b;
+}
+
+.widget.golds {
+    display: flex;
+    justify-content: space-around;
+}
+
+.widget.golds p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c9aa00;
+}
+
+.widget-currencies .widget {
+    grid-template-columns: 70px auto;
+}
+
+.widget-currencies .widget-icon {
+    width: 70px;
+    background: no-repeat;
+}
+
+p.currency-icon {
+    background: rgb(30 0 227 / 13%);
+    width: 56px;
+    color: #1E00E3;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.error-message {
+    background: #ffebeb;
+    padding: 15px;
+    border-radius: 8px;
+    color: red;
+    border: 1px solid red;
+    display: none;
+}
+
+body.error .error-message {
+    display: block;
+}
+
+body.error section {
+    display: none;
+}
+
+
+@media screen and ( min-width: 1200px ){
+    .widget-body p{
+        font-size: 26px;
+    }
+}

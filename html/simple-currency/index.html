@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نرخ طلا و ارز</title>
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>
+                    نرخ طلا و ارز
+                </h1>
+                <span class="last-update">
+                    آخرین بروزرسانی: دو ساعت قبل
+                </span>
+            </div>
+            <button type="button" class="btn btn-primary">
+                بروزرسانی نرخ ارز
+            </button>
+        </header>
+        <div class="error-message">
+            ظاهرا اینترنت شما قطع است، لطفاً اتصال اینترنت را بررسی کنید
+        </div>
+        <section class="section-coins">
+            <h2>قیمت سکه</h2>
+            <div class="widgets widget-coins">
+                <div class="widget coin">
+                    <div class="widget-icon">
+                        <img src="images/coin.png" alt="coin" width="115" height="115">
+                    </div>
+                    <div class="widget-body">
+                        <h3>سکه بهار آزادی</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget half_coin">
+                    <div class="widget-icon">
+                        <img src="images/coin.png" alt="coin" width="115" height="115">
+                    </div>
+                    <div class="widget-body">
+                        <h3>نیم سکه بهار آزادی</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget quarter_coin">
+                    <div class="widget-icon">
+                        <img src="images/coin.png" alt="coin" width="115" height="115">
+                    </div>
+                    <div class="widget-body">
+                        <h3>ربع سکه بهار آزادی</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--.section-coins-->
+
+        <section class="section-golds">
+            <h2>قیمت طلا</h2>
+            <div class="widgets widget-coins">
+                <div class="widget golds">
+                    <img src="images/gold-bar.png" alt="gold-bar" width="100" height="100">
+                    <p>قیمت طلا</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="54.001" height="41.363" viewBox="0 0 54.001 41.363">
+                        <g id="arrow-right" transform="translate(52.001 38.535) rotate(180)">
+                            <path id="Path_2" data-name="Path 2" d="M0,0,17.853,17.853,0,35.706" transform="translate(32.148)" fill="none" stroke="gold" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+                            <path id="Path_3" data-name="Path 3" d="M0,0H49.5" transform="translate(0 17.853)" fill="none" stroke="gold" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="widget gold_18">
+                    <div class="widget-icon">
+                        <img src="images/gold-18.png" alt="coin" width="115" height="115">
+                    </div>
+                    <div class="widget-body">
+                        <h3>طلای 18 عیار</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget gold_24">
+                    <div class="widget-icon">
+                        <img src="images/gold-24.png" alt="coin" width="115" height="115">
+                    </div>
+                    <div class="widget-body">
+                        <h3>طلای 24 عیار</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--.section-golds-->
+
+        <section class="section-currencies">
+            <h2>قیمت ارز</h2>
+            <div class="widgets widget-currencies">
+                <div class="widget currency-dollar">
+                    <div class="widget-icon">
+                        <p class="currency-icon">$</p>
+                    </div>
+                    <div class="widget-body">
+                        <h3>دلار آمریکا</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget currency-euro">
+                    <div class="widget-icon">
+                        <p class="currency-icon">€</p>
+                    </div>
+                    <div class="widget-body">
+                        <h3>یورو</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget currency-derham">
+                    <div class="widget-icon">
+                        <p class="currency-icon">د</p>
+                    </div>
+                    <div class="widget-body">
+                        <h3>درهم</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+                <div class="widget currency-pound">
+                    <div class="widget-icon">
+                        <p class="currency-icon">£</p>
+                    </div>
+                    <div class="widget-body">
+                        <h3>پوند</h3>
+                        <p class="price">241,536,000</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--.section-currencies-->
+
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        jQuery(document).ready( function( $ ){
+
+            function number_format( input ){
+                input = input + '';
+                return input.replace( /\B(?=(\d{3})+(?!\d))/g, "," );
+            }
+            
+
+        } );
+    </script>
+</body>
+</html>
