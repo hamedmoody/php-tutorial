@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.212" height="25.212" viewBox="0 0 25.212 25.212">
+  <g id="tick" transform="translate(-572 -726)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="9" cy="9" r="9" transform="translate(576 730)" fill="#fff"/>
+    <path id="tick-circle" d="M14.606,2A12.606,12.606,0,1,0,27.212,14.606,12.627,12.627,0,0,0,14.606,2Zm6.026,9.707-7.148,7.148a.943.943,0,0,1-1.336,0L8.58,15.287A.945.945,0,0,1,9.917,13.95l2.9,2.9L19.3,10.37a.945.945,0,0,1,1.336,1.336Z" transform="translate(570 724)" fill="#00ac11"/>
+  </g>
+</svg>
