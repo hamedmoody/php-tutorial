@@ -157,7 +157,8 @@ p.size-note {
     transition: 0.3s;
 }
 
-.file-thumbnail img {
+.file-thumbnail img,
+.file-thumbnail video{
     width: 100%;
     height: auto;
     border-radius: 8px;
