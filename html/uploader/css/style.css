@@ -310,13 +310,40 @@ a.action-copy {
     background: hsl(126deg 100% 34% / 13%);
 }
 
+.file.queue {
+    border-color: orange;
+}
+
 .file.uploading .action-cancel,
 .file.uploaded .action-delete,
 .file.uploaded .action-download,
 .file.uploaded .action-copy,
 .file.error .action-retry,
-.file.error .action-cancel{
+.file.error .action-cancel,
+.file.queue .action-cancel{
     display: inline-flex;
+}
+
+.file-status {
+    display: inline;
+    background: #e8e8e8;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.file.queue .file-status {
+    color: orange;
+    background: #fdf3e3;
+}
+
+.file.uploaded .file-status {
+    color: var(--color-success);
+    background: rgb(0 172 17 / 13%);
+}
+
+.error.file .file-status {
+    color: var(--color-error);
+    background-color: rgb(255 0 0 / 13%) !important;
 }
 
 .supported-format-error {
