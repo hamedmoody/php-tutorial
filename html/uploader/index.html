@@ -11,7 +11,10 @@
 
     <div id="uploader">
         <h1>آپلود فایل</h1>
-        <label class="drag-box" for="file"><!-- available classes: .file-hover -->
+        <label class="drag-box" for="file"><!-- available classes: .file-hover, invalid-format -->
+            <span class="supported-format-error">
+                فقط فایل های با فرمت png, jpg, mp4 را می توانید انتخاب کنید
+            </span>
             <div class="upload-icons">
                 <img src="images/icon-jpg.png" class="icon-jpg" alt="png" width="142" height="142">
                 <img src="images/icon-mp4.png" class="icon-mp4" alt="png" width="142" height="142">

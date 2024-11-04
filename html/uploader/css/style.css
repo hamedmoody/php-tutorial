@@ -46,6 +46,7 @@ h1 {
     border-radius: 15px;
     transition: 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
 #file{
@@ -316,4 +317,27 @@ a.action-copy {
 .file.error .action-retry,
 .file.error .action-cancel{
     display: inline-flex;
+}
+
+.supported-format-error {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    background: #ffe1e1;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--color-error);
+    transition: 0.3s;
+}
+
+.drag-box.invalid-format .supported-format-error {
+    visibility: visible;
+    opacity: 1;
 }
