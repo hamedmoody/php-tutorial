@@ -1,0 +1,161 @@
+:root {
+    --color-primary: #0079E2;
+    --color-primary-hover: #0062b7;
+    --color-secondary: #E35B17;
+    --color-secondary-light: #ffede5;
+    --color-primary-rgb: 0,121,226;
+    --color-secondary-rgb: 227,91,23;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh;
+    font-size: 16px;
+    background: #ececec;
+    min-height: 100vh;
+}
+
+button,input{
+    font-family: YekanBakh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+.btn {
+    padding: 5px 25px;
+    border-radius: 4px;
+    color: #FFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:before {
+    content: "";
+    background: url('spinner.svg') center/100% no-repeat;
+    width: 0;
+    height: 24px;
+    transition: .3s
+}
+
+.btn.loading:before{
+    width: 24px;
+}
+
+.btn.btn-primary {
+    background: var(--color-primary);
+    transition: 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn.btn-secondary {
+    background: #FFF;
+    color: var(--color-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.btn.btn-secondary:hover{
+    background: var(--color-secondary-light);
+}
+
+
+form#register-user {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 10px;
+    /*width: 600px;*/
+    display: grid;
+    grid-template-columns: auto 160px;
+    gap: 10px;
+    align-items: center;
+    /*margin: auto;*/
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    padding: 6px 8px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+}
+
+.form-left input {
+    display: none;
+}
+
+.form-left label {
+    border: 2px dashed #d1d1d1;
+    background: #f8f8f8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.upload-progress{
+    display: none;
+}
+
+.uploading .upload-progress{
+    display: block;
+}
+
+.uploading .select-image{
+    display: none;
+}
+
+.form-left label img{
+    width: 95%;
+}
+
+.upload-preview{
+    display: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.cards img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card {
+    background: #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
