@@ -292,6 +292,15 @@ p.size-note {
     z-index: 2;
 }
 
+.drop-zone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+}
+
 .file.error .file-thumbnail:after{
     background: url('../images/error.svg') center;
     background-size: 100%;

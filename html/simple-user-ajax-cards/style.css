@@ -125,8 +125,13 @@ form#register-user {
     display: none;
 }
 
-.uploading .upload-progress{
+.uploading .upload-progress,
+.uploading .upload-preview{
     display: block;
+}
+
+label.uploading {
+    flex-direction: column;
 }
 
 .uploading .select-image{
