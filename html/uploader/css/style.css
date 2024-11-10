@@ -187,6 +187,7 @@ p.size-note {
     bottom: 0;
     background: var(--color-primary);
     border-radius: 50px;
+    transition: 0.2s linear;
 }
 
 .uploaded-bar-percent {

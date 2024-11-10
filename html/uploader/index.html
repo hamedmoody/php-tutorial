@@ -147,7 +147,7 @@
     <script>
         jQuery(document).ready(function( $ ){
 
-            function format_bytes( bytes, decimals = 2 ) {
+            function format_bytes( bytes, decimals = 2, show_unit = truu ) {
                 if (!+bytes) return '0 Bytes'
 
                 const k = 1024
@@ -156,7 +156,11 @@
 
                 const i = Math.floor(Math.log(bytes) / Math.log(k))
 
-                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+                let result = `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}`;
+                if( show_unit ){
+                    result+= `  ${sizes[i]}`;
+                }
+                return result;
 
             }
 
