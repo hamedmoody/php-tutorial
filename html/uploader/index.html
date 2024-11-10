@@ -147,7 +147,7 @@
     <script>
         jQuery(document).ready(function( $ ){
 
-            function format_bytes( bytes, decimals = 2, show_unit = truu ) {
+            function format_bytes( bytes, decimals = 2, show_unit = true ) {
                 if (!+bytes) return '0 Bytes'
 
                 const k = 1024
