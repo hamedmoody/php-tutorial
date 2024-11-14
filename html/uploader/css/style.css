@@ -8,6 +8,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 strong{
     font-weight: bold;
@@ -30,6 +31,8 @@ body{
     background: #FFF;
     border-radius: 15px;
     width: 700px;
+    max-width: 96%;
+
 }
 
 h1 {
