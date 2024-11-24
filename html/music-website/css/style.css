@@ -1,0 +1,234 @@
+:root {
+    --color-primary: #735BFF;
+    --color-accent: #AC4FFF;
+
+    --color-secondary: #729CFE;
+
+    --color-success: #00CE30;
+    --color-success-light: #E3FAE8;
+
+    --color-error: #CE0031;
+    --color-error-light: #FAE3E8;
+
+    --color-info: #0037CE;
+    --color-info-light: #E3E9FA;
+
+    --color-warning: #CEA500;
+    --color-warning-light: #FAF5E3;
+
+    --color-text: #242424;
+
+    --gradient-primary: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+strong{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: var(--color-primary)
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-size: 16px;
+    background: #ececec;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,input,textarea, select, button{
+    font-family: YekanBakh, serif;
+}
+.ltr{
+    direction: ltr;
+    text-align: left;
+}
+/** Button: Start */
+.btn{
+    display: flex;
+    background: var( --gradient-primary );
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFF;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
+    outline-style: none;
+}
+.btn.btn-outline{
+    color: var(--color-text);
+    background: white;
+    border-color: #EEEEEE;
+}
+.btn-full{
+    width: 100%;
+}
+.btn:before{
+    content: "";
+    height: 16px;
+    background: url('../images/loading-spinner.svg') no-repeat center;
+    background-size: 100%;
+    width: 0;
+    transition: 0.3s;
+}
+.btn.loading:before{
+    width: 16px;
+}
+.btn:disabled{
+    filter: grayscale(.5);
+    opacity: .7;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.form-group label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input.form-control,textarea.form-control{
+    border-radius: 10px;
+    border: 1px solid #CDCDCD;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    outline-style: none;
+    transition: 0.3s;
+}
+
+input.form-control:focus, textarea.form-control:focus{
+    border-color: var(--color-primary);
+}
+
+.input-error{
+    color: var(--color-error);
+    font-size: 15px;
+    padding: 5px;
+    display: none;
+}
+.form-group.error input{
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+.form-group.error .input-error{
+    display: block;
+}
+/** Button: End */
+
+/** Login: start */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box{
+    width: 400px;
+    max-width: 95%;
+}
+.glow-box {
+    background: #FFF;
+    border: 1px solid #DFDFDF;
+    padding: 15px;
+    border-radius: 30px;
+    position: relative;
+}
+.glow-box:before,.glow-box:after{
+    content: "";
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    position: absolute;
+    filter: blur(25px);
+    z-index: -1;
+    bottom: 15px;
+}
+.glow-box:before{
+    left: 15px;
+}
+.glow-box:after{
+    right: 15px;
+}
+.login-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.login-logo img{
+    height: 72px;
+    width: auto;
+}
+.or{
+    height: 1px;
+    background: #D1D1D1;
+    margin: 30px 0;
+    position: relative;
+}
+.or:before{
+    content: "یا";
+    background: #FFF;
+    color: #D1D1D1;
+    width: 15px;
+    position: absolute;
+    text-align: center;
+    left: calc( 50% - 7px );
+    top: -10px;
+}
+.google-login img{
+    width: 24px;
+    height: auto;
+    transition: 0.3s;
+}
+.google-login.loading img{
+    width: 0;
+}
+.agreement{
+    margin-top: 15px;
+}
+
+#login-form h1, #verify-form h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+.otp-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 25px 0;
+    font-size: 15px;
+}
+.resend-otp{
+    font-weight: 600;
+    opacity: .4;
+    color: var(--color-text);
+    transition: 0.3s;
+}
+.otp-expired .resend-otp{
+    opacity: 1;
+    color: var(--color-primary)
+}
+.expired-text{
+    display: none;
+}
+.otp-expired .count-down{
+    display: none;
+}
+.otp-expired .expired-text{
+    display: block;
+}
+/** Login: End */

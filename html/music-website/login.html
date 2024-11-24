@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود - موزیکدان</title>
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+            <a href="/" class="login-logo">
+                <img src="images/logo.svg" alt="Musicjooyar" width="210" height="105">
+            </a>
+            <div class="glow-box">
+
+                <form action="#" id="verify-form"><!-- .otp-expired -->
+
+                    <h1>کد تأیید را وارد کنید</h1>
+                    <div class="form-group"><!-- .error -->
+                        <label for="otp">
+                            کد تأیید
+                            <a href="#" class="change-phone">
+                                تغییر شماره
+                            </a>
+                        </label>
+                        <input type="text" id="otp" class="form-control ltr" inputmode="numeric" name="otp">
+                        <p class="input-error">پیام خطا</p>
+                    </div>
+                    <div class="otp-time">
+                        <p class="count-down">
+                            <strong class="count-down-remain">03:32</strong>
+                            مانده تا دریافت مجدد
+                        </p>
+                        <p class="expired-text">
+                            کدمنقضی شد
+                        </p>
+                        <a href="#" class="resend-otp">
+                            دریافت مجدد کد
+                        </a>
+                    </div>
+                    <button class="btn btn-primary btn-full">
+                        تأیید و ورود
+                    </button>
+
+                </form><!--#verify-form-->
+
+                <form action="#" id="login-form">
+                    <h1>ورود/ثبت نام</h1>
+                    <div class="form-group">
+                        <label for="phone">شماره همراه</label>
+                        <input type="text" id="phone" class="form-control ltr" inputmode="tel" name="phone" placeholder="Ex: 09123456789">
+                        <p class="input-error">پیام خطا</p>
+                    </div>
+                    <button class="btn btn-primary btn-full">
+                        ورود
+                    </button>
+                    <div class="or"></div>
+                    <a href="#google-login" class="btn btn-full btn-outline google-login">
+                        <img src="images/google-logo.svg" alt="Google Login" width="800" height="800">
+                        ورود با گوگل
+                    </a>
+                    <div class="agreement">
+                        با ورود به سایت، شما
+                        <a href="#">قوانین ما</a>
+                        را پذیرفته اید
+                    </div>
+                </form><!--#login-form-->
+
+            </div>
+        </div><!--.login-box-->
+
+    </div><!--.login-container-->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function( $ ){
+            //Jquery Code Here
+
+
+        });
+    </script>
+</body>
+</html>
