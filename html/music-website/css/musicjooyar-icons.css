@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'musicjooyar';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/musicjooyar.eot?0075b1bb33fdde617629e11bf2004588?#iefix") format("embedded-opentype"),
+url("../fonts/musicjooyar.woff2?0075b1bb33fdde617629e11bf2004588") format("woff2"),
+url("../fonts/musicjooyar.woff?0075b1bb33fdde617629e11bf2004588") format("woff");
+}
+
+.mj, .mj-icons {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.mj-icons {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  fill: currentColor;
+}
+
+.mj {
+  font-family: 'musicjooyar';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.mj-arrow-down:before { content: "\f101"; }
+.mj-arrow-left:before { content: "\f102"; }
+.mj-arrow-reply:before { content: "\f103"; }
+.mj-arrow-right:before { content: "\f104"; }
+.mj-calendar-edit:before { content: "\f105"; }
+.mj-category:before { content: "\f106"; }
+.mj-close-circle:before { content: "\f107"; }
+.mj-close:before { content: "\f108"; }
+.mj-edit-2:before { content: "\f109"; }
+.mj-element-3:before { content: "\f10a"; }
+.mj-eye:before { content: "\f10b"; }
+.mj-filter:before { content: "\f10c"; }
+.mj-heart-filled:before { content: "\f10d"; }
+.mj-heart-tick:before { content: "\f10e"; }
+.mj-heart:before { content: "\f10f"; }
+.mj-like-1:before { content: "\f110"; }
+.mj-logout:before { content: "\f111"; }
+.mj-message-text:before { content: "\f112"; }
+.mj-message:before { content: "\f113"; }
+.mj-microphone-2:before { content: "\f114"; }
+.mj-music:before { content: "\f115"; }
+.mj-musicjooyar:before { content: "\f116"; }
+.mj-play:before { content: "\f117"; }
+.mj-profile-tick:before { content: "\f118"; }
+.mj-refresh-2:before { content: "\f119"; }
+.mj-search-normal-1:before { content: "\f11a"; }
+.mj-setting-3:before { content: "\f11b"; }
+.mj-Telegram:before { content: "\f11c"; }
+.mj-tick-circle:before { content: "\f11d"; }
+.mj-timer-1:before { content: "\f11e"; }
+.mj-trash:before { content: "\f11f"; }
+.mj-user:before { content: "\f120"; }
+.mj-warning-2:before { content: "\f121"; }
+.mj-web:before { content: "\f122"; }
