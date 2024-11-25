@@ -11,15 +11,20 @@
 
     <div class="login-container">
 
-        <div class="login-box">
+        <div class="login-box active-verify-form"><!--.active-verify-form-->
             <a href="/" class="login-logo">
                 <img src="images/logo.svg" alt="Musicjooyar" width="210" height="105">
             </a>
             <div class="glow-box">
 
-                <form action="#" id="verify-form"><!-- .otp-expired -->
+                <form action="#" id="verify-form"><!-- .otp-expired, .otp-sending -->
 
                     <h1>کد تأیید را وارد کنید</h1>
+                    <p class="otp-sent-number">
+                        کد به شماره
+                        <strong>09123456789</strong>
+                        ارسال شد
+                    </p>
                     <div class="form-group"><!-- .error -->
                         <label for="otp">
                             کد تأیید
@@ -41,6 +46,7 @@
                         <a href="#" class="resend-otp">
                             دریافت مجدد کد
                         </a>
+                        <span class="otp-resend-loading">در حال ارسال مجدد</span>
                     </div>
                     <button class="btn btn-primary btn-full">
                         تأیید و ورود

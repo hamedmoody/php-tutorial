@@ -197,12 +197,28 @@ input.form-control:focus, textarea.form-control:focus{
 }
 .agreement{
     margin-top: 15px;
+    text-align: center;
+}
+
+.otp-sent-number {
+    margin: 15px 0;
 }
 
 #login-form h1, #verify-form h1 {
     text-align: center;
     margin: 20px 0;
     font-size: 22px;
+}
+
+#verify-form{
+    display: none;
+}
+
+.active-verify-form #verify-form{
+    display: block;
+}
+.active-verify-form #login-form{
+    display: none;
 }
 
 .otp-time{
@@ -222,6 +238,28 @@ input.form-control:focus, textarea.form-control:focus{
     opacity: 1;
     color: var(--color-primary)
 }
+.otp-resend-loading{
+    display: none;
+    position: relative;
+    font-size: 14px;
+    padding-right: 24px;
+}
+.otp-resend-loading:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('../images/loading-spinner-primary.svg') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 0;
+}
+.otp-sending .otp-resend-loading{
+    display: block;
+}
+.otp-sending .resend-otp{
+    display: none;
+}
+
 .expired-text{
     display: none;
 }
