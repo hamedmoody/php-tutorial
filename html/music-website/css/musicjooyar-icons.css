@@ -2,9 +2,9 @@
   font-family: 'musicjooyar';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/musicjooyar.eot?0075b1bb33fdde617629e11bf2004588?#iefix") format("embedded-opentype"),
-url("../fonts/musicjooyar.woff2?0075b1bb33fdde617629e11bf2004588") format("woff2"),
-url("../fonts/musicjooyar.woff?0075b1bb33fdde617629e11bf2004588") format("woff");
+  src: url("../fonts/musicjooyar.eot?e9f17147c4acc19622b831770caa2dd2?#iefix") format("embedded-opentype"),
+  url("../fonts/musicjooyar.woff2?e9f17147c4acc19622b831770caa2dd2") format("woff2"),
+  url("../fonts/musicjooyar.woff?e9f17147c4acc19622b831770caa2dd2") format("woff");
 }
 
 .mj, .mj-icons {
@@ -50,36 +50,41 @@ url("../fonts/musicjooyar.woff?0075b1bb33fdde617629e11bf2004588") format("woff")
 }
 
 .mj-arrow-down:before { content: "\f101"; }
-.mj-arrow-left:before { content: "\f102"; }
-.mj-arrow-reply:before { content: "\f103"; }
-.mj-arrow-right:before { content: "\f104"; }
-.mj-calendar-edit:before { content: "\f105"; }
-.mj-category:before { content: "\f106"; }
-.mj-close-circle:before { content: "\f107"; }
-.mj-close:before { content: "\f108"; }
-.mj-edit-2:before { content: "\f109"; }
-.mj-element-3:before { content: "\f10a"; }
-.mj-eye:before { content: "\f10b"; }
-.mj-filter:before { content: "\f10c"; }
-.mj-heart-filled:before { content: "\f10d"; }
-.mj-heart-tick:before { content: "\f10e"; }
-.mj-heart:before { content: "\f10f"; }
-.mj-like-1:before { content: "\f110"; }
-.mj-logout:before { content: "\f111"; }
-.mj-message-text:before { content: "\f112"; }
-.mj-message:before { content: "\f113"; }
-.mj-microphone-2:before { content: "\f114"; }
-.mj-music:before { content: "\f115"; }
-.mj-musicjooyar:before { content: "\f116"; }
-.mj-play:before { content: "\f117"; }
-.mj-profile-tick:before { content: "\f118"; }
-.mj-refresh-2:before { content: "\f119"; }
-.mj-search-normal-1:before { content: "\f11a"; }
-.mj-setting-3:before { content: "\f11b"; }
-.mj-Telegram:before { content: "\f11c"; }
-.mj-tick-circle:before { content: "\f11d"; }
-.mj-timer-1:before { content: "\f11e"; }
-.mj-trash:before { content: "\f11f"; }
-.mj-user:before { content: "\f120"; }
-.mj-warning-2:before { content: "\f121"; }
-.mj-web:before { content: "\f122"; }
+.mj-arrow-head-down:before { content: "\f102"; }
+.mj-arrow-head-left:before { content: "\f103"; }
+.mj-arrow-head-right:before { content: "\f104"; }
+.mj-arrow-head-up:before { content: "\f105"; }
+.mj-arrow-left:before { content: "\f106"; }
+.mj-arrow-reply:before { content: "\f107"; }
+.mj-arrow-right:before { content: "\f108"; }
+.mj-arrow-up:before { content: "\f109"; }
+.mj-calendar-edit:before { content: "\f10a"; }
+.mj-category:before { content: "\f10b"; }
+.mj-close-circle:before { content: "\f10c"; }
+.mj-close:before { content: "\f10d"; }
+.mj-edit-2:before { content: "\f10e"; }
+.mj-element-3:before { content: "\f10f"; }
+.mj-eye:before { content: "\f110"; }
+.mj-filter:before { content: "\f111"; }
+.mj-heart-filled:before { content: "\f112"; }
+.mj-heart-tick:before { content: "\f113"; }
+.mj-heart:before { content: "\f114"; }
+.mj-like-1:before { content: "\f115"; }
+.mj-logout:before { content: "\f116"; }
+.mj-message-text:before { content: "\f117"; }
+.mj-message:before { content: "\f118"; }
+.mj-microphone-2:before { content: "\f119"; }
+.mj-music:before { content: "\f11a"; }
+.mj-musicjooyar:before { content: "\f11b"; }
+.mj-play:before { content: "\f11c"; }
+.mj-profile-tick:before { content: "\f11d"; }
+.mj-refresh:before { content: "\f11e"; }
+.mj-search-normal-1:before { content: "\f11f"; }
+.mj-setting-3:before { content: "\f120"; }
+.mj-Telegram:before { content: "\f121"; }
+.mj-tick-circle:before { content: "\f122"; }
+.mj-timer-1:before { content: "\f123"; }
+.mj-trash:before { content: "\f124"; }
+.mj-user:before { content: "\f125"; }
+.mj-warning-2:before { content: "\f126"; }
+.mj-web:before { content: "\f127"; }
