@@ -1,4 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="209.949" height="90.968" viewBox="0 0 209.949 90.968">
+  <style>
+    @keyframes wave{
+      from{
+        d: path("M45,0C69.385,6.361,90.736,19.584,90,45S70.069,89.274,45,90,1.539,69.574,0,45,20.615-6.361,45,0Z");
+      }
+      to{
+        d: path("M45,0C84.549-.184,90,20.147,90,45S68.722,81.209,45,87.541.024,71.208,0,45,5.451.184,45,0Z");
+      }
+    }
+    #Path_164{
+      animation: wave 2s infinite linear alternate;
+    }
+  </style>
   <defs>
     <linearGradient id="linear-gradient" y1="0.604" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#ac4fff"/>
