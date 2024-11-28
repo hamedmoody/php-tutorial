@@ -715,3 +715,10 @@ span.comment-count.unread-comment:before {
 }
 /** Table Start: End */
 
+/** Edit Music: Start */
+form.form-save-music {
+    display: grid;
+    grid-template-columns: auto 400px;
+    gap: 15px;
+}
+/** Edit Music: End */
