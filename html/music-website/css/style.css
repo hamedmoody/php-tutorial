@@ -785,10 +785,10 @@ label.cover-uploader .uploading-status{
     font-size: 18px;
     font-weight: 500;
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
