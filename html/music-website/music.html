@@ -118,22 +118,33 @@
                     </div><!--.music-form-right-->
 
                     <div class="music-form-left">
-                        <label for="cover" class="cover-uploader">
-                            <div class="cover-uploader-icons">
-                                <img src="images/icon-png.png" alt="Png" class="icon-png" width="142" height="142">
-                                <img src="images/icon-jpg.png" alt="Png" class="jpg" width="142" height="142">
-                            </div>
-                            <p>کاور و تصویر موزیک را به اینجا بکشید</p>
-                            <p>یا</p>
-                            <p class="click-for-upload">کلیک کنید</p>
-                            <input type="file" id="cover" name="cover" style="display: none;">
-                            <div class="uploading-status" style="background-image: url('images/music-cover.jpg')">
-                                <div class="uploading-text">
-                                    در حال بارگذاری فایل:
-                                    <strong class="uploading-percent">2%</strong>
+                        <div class="cover-container"><!-- .file-hover, .error, .uploading, .uploaded -->
+                            <label for="cover" class="cover-uploader">
+                                <div class="cover-uploader-icons">
+                                    <img src="images/icon-png.png" alt="Png" class="icon-png" width="142" height="142">
+                                    <img src="images/icon-jpg.png" alt="Png" class="jpg" width="142" height="142">
                                 </div>
+                                <p>کاور و تصویر موزیک را به اینجا بکشید</p>
+                                <p>یا</p>
+                                <p class="click-for-upload">کلیک کنید</p>
+                                <input type="file" id="cover" name="cover" style="display: none;">
+                                <p class="upload-drop-text">
+                                    فایل را رها کنید
+                                </p>
+                                <p class="uploading-error">
+                                    خطا در آپلود فایل
+                                </p>
+                                <div class="uploading-status" style="background-image: url('images/music-cover.jpg')">
+                                    <div class="uploading-text">
+                                        در حال بارگذاری فایل:
+                                        <strong class="uploading-percent">2%</strong>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="uploaded-image" style="background-image: url('images/music-cover.jpg')">
+                                <i class="mj mj-trash delete-cover"></i>
                             </div>
-                        </label>
+                        </div>
                     </div><!--.music-form-left-->
                 </form><!--.table-filter-->
 

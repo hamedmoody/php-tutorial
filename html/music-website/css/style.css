@@ -761,8 +761,11 @@ form.form-save-music {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
+.cover-container{
+    position: relative;
+}
 
-label.cover-uploader {
+.cover-uploader {
     background: #FBFBFB;
     border: 1px dashed #707070;
     display: flex;
@@ -778,9 +781,9 @@ label.cover-uploader {
     position: relative;
 }
 
-label.cover-uploader:before,
-label.cover-uploader .uploading-status{
-    content: "فایل را رها کنید";
+.cover-uploader .upload-drop-text,
+.cover-uploader .uploading-status,
+.cover-uploader .uploading-error{
     background: #ffffffad;
     font-size: 18px;
     font-weight: 500;
@@ -799,12 +802,18 @@ label.cover-uploader .uploading-status{
     opacity: 0;
 }
 
-label.cover-uploader.file-hover:before {
+.cover-container.file-hover .upload-drop-text{
     visibility: visible;
     opacity: 1;
 }
 
-label.cover-uploader.uploading .uploading-status{
+.cover-container.error .uploading-error{
+    visibility: visible;
+    opacity: 1;
+    color: red;
+}
+
+.cover-container.uploading .uploading-status{
     background: no-repeat;
     background-size: cover;
     visibility: visible;
@@ -835,5 +844,29 @@ label.cover-uploader p:not(.click-for-upload) {
     font-weight: 400;
 }
 
+.uploaded-image {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-size: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+}
+.cover-container.uploaded .uploaded-image{
+    visibility: visible;
+    opacity: 1;
+}
+.uploaded-image .delete-cover {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
 
 /** Edit Music: End */
