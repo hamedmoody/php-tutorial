@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ورود - موزیکدان</title>
     <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/musicjooyar-icons.css">
 </head>
 <body>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <div class="panel-container glow-box">
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -86,16 +85,55 @@
                         <div class="music-metas">
                             <div class="form-group">
                                 <label for="artist">خواننده</label>
-                                <select name="artist" id="artist" multiple class="form-control select2">
+                                <select name="artist" id="artist" multiple class="form-control select2" style="width: 100%">
                                     <option value="1">حمید هیراد</option>
                                     <option value="2">مصطفی راغب</option>
                                     <option value="3">مصطفی زمانی</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="category">دسته موزیک</label>
+                                <select name="category" id="category" multiple class="form-control select2" style="width: 100%">
+                                    <option value="1">شاد</option>
+                                    <option value="2">رپ</option>
+                                    <option value="3">عروسی</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="status">وضعیت</label>
+                                <select name="status" id="status" class="form-control" style="width: 100%">
+                                    <option value="1">پیش نویس</option>
+                                    <option value="2">منتشر شده</option>
+                                    <option value="3">درانتظار بررسی</option>
+                                    <option value="3">حذف شده</option>
+                                </select>
+                            </div>
+                            <div class="form-group has-unit">
+                                <label for="duration">عنوان موزیک</label>
+                                <input type="text" name="duration" disabled id="duration" class="form-control" placeholder="00:00">
+                                <span class="unit">دقیقه</span>
+                            </div>
                         </div>
+                        <button class="btn btn-primary">ذخیره/ویرایش موزیک</button>
                     </div><!--.music-form-right-->
-                    <div class="music-form-left">
 
+                    <div class="music-form-left">
+                        <label for="cover" class="cover-uploader">
+                            <div class="cover-uploader-icons">
+                                <img src="images/icon-png.png" alt="Png" class="icon-png" width="142" height="142">
+                                <img src="images/icon-jpg.png" alt="Png" class="jpg" width="142" height="142">
+                            </div>
+                            <p>کاور و تصویر موزیک را به اینجا بکشید</p>
+                            <p>یا</p>
+                            <p class="click-for-upload">کلیک کنید</p>
+                            <input type="file" id="cover" name="cover" style="display: none;">
+                            <div class="uploading-status" style="background-image: url('images/music-cover.jpg')">
+                                <div class="uploading-text">
+                                    در حال بارگذاری فایل:
+                                    <strong class="uploading-percent">2%</strong>
+                                </div>
+                            </div>
+                        </label>
                     </div><!--.music-form-left-->
                 </form><!--.table-filter-->
 
@@ -104,6 +142,7 @@
     </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

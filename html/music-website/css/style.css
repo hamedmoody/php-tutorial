@@ -1,5 +1,6 @@
 :root {
     --color-primary: #735BFF;
+    --color-primary-light: #EAE6FF;
     --color-accent: #AC4FFF;
 
     --color-secondary: #729CFE;
@@ -104,7 +105,7 @@ body,input,textarea, select, button{
     justify-content: space-between;
 }
 
-input.form-control,textarea.form-control{
+input.form-control,textarea.form-control,select.form-control{
     border-radius: 10px;
     border: 1px solid #CDCDCD;
     padding: 10px;
@@ -117,6 +118,20 @@ input.form-control,textarea.form-control{
 input.form-control:focus, textarea.form-control:focus{
     border-color: var(--color-primary);
 }
+
+.form-group.has-unit {
+    position: relative;
+}
+
+.form-group.has-unit .unit {
+    position: absolute;
+    left: 6px;
+    bottom: 9px;
+    background: #EBEBEB;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
 
 .input-error{
     color: var(--color-error);
@@ -715,10 +730,110 @@ span.comment-count.unread-comment:before {
 }
 /** Table Start: End */
 
+/** Select2 Overwrite: Start */
+.select2-container--default li.select2-selection__choice {
+    background: var(--color-primary-light) !important;
+    color: var(--color-primary);
+    border: none !important;
+    display: flex !important;
+    flex-direction: row-reverse;
+    gap: 3px;
+    float: right !important;
+}
+
+.select2-container--default li.select2-selection__choice .select2-selection__choice__remove{
+    color: var(--color-error);
+}
+.select2-container--default .select2-selection--multiple {
+    border-color: #CDCDCD !important;
+    border-radius: 10px !important;
+}
+/** Select2 Overwrite: End */
+
 /** Edit Music: Start */
 form.form-save-music {
     display: grid;
-    grid-template-columns: auto 400px;
+    grid-template-columns: auto 300px;
     gap: 15px;
 }
+.music-metas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+label.cover-uploader {
+    background: #FBFBFB;
+    border: 1px dashed #707070;
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    flex-direction: column;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+label.cover-uploader:before,
+label.cover-uploader .uploading-status{
+    content: "فایل را رها کنید";
+    background: #ffffffad;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+label.cover-uploader.file-hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+label.cover-uploader.uploading .uploading-status{
+    background: no-repeat;
+    background-size: cover;
+    visibility: visible;
+    opacity: 1;
+}
+
+.uploading-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffffb5;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+label.cover-uploader .cover-uploader-icons img {
+    width: 64px;
+    height: auto;
+}
+
+label.cover-uploader p:not(.click-for-upload) {
+    color: #A7A7A7;
+    font-weight: 400;
+}
+
+
 /** Edit Music: End */
