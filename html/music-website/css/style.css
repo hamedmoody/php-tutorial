@@ -562,7 +562,7 @@ main.main header i:after{
     border-radius: 10px 0 0 10px;
 }
 
-.music-title,.music-artist {
+.music-title,.music-artist,.row-title {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -572,7 +572,8 @@ main.main header i:after{
     width: 240px;
 }
 
-.music-title img{
+.music-title img,
+.row-title img{
     border-radius: 5px;
 }
 
@@ -624,21 +625,21 @@ span.comment-count.unread-comment:before {
     background: var(--color-error);
 }
 
-.status.draft {
+.status.draft, .status.inactive {
     color: var(--color-info);
     background: var(--color-info-light);
 }
 
-.status.draft:before {
+.status.draft:before, .status.inactive:before {
     background: var(--color-info);
 }
 
-.status.publish {
+.status.publish,.status.active {
     color: var(--color-success);
     background: var(--color-success-light);
 }
 
-.status.publish:before {
+.status.publish:before,.status.active:before {
     background: var(--color-success);
 }
 
@@ -1176,6 +1177,49 @@ p.music-item-title .mj-close-circle {
 
 .username-check.success .username-success {
     display: flex;
+}
+
+#cropper-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0deg 0% 0% / 20%);
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cropper-box {
+    background: #FFF;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.cropper-box .croppie {
+    width: 500px;
+    aspect-ratio: 16/9;
+    background: red;
+    margin-bottom: 15px;
+}
+
+.cropper-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.cropper-footer a {
+    width: 150px;
+}
+
+#cropper-wrapper.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 /** Profile: End */
