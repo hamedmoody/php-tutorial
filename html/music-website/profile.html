@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود - پروفایل</title>
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/musicjooyar-icons.css">
+</head>
+<body>
+<div class="panel-container glow-box">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-logo">
+                <img src="images/logo-animated.svg" alt="Musicjooyar" width="210" height="105">
+            </a>
+            <img src="images/hamedmoody.jpg" alt="حامد مودی" class="sidebar-avatar" width="512" height="512">
+            <strong>حامد مودی</strong>
+            <span>09123456789</span>
+        </div><!--.sidebar-header-->
+        <nav class="sidebar-menu">
+            <h2>منوی اصلی</h2>
+            <a href="#">
+                <i class="mj mj-element-3"></i>
+                پیشخوان
+            </a>
+            <a href="#" class="active">
+                <i class="mj mj-music"></i>
+                موزیک ها
+            </a>
+            <a href="#">
+                <i class="mj mj-message"></i>
+                دیدگاه ها
+                <span class="count">6</span>
+            </a>
+            <a href="#">
+                <i class="mj mj-category"></i>
+                دسته بندی
+            </a>
+            <a href="#">
+                <i class="mj mj-heart-tick"></i>
+                علاقمندی ها
+            </a>
+            <a href="#">
+                <i class="mj mj-microphone-2"></i>
+                خواننده ها
+            </a>
+            <a href="#">
+                <i class="mj mj-profile-tick"></i>
+                پروفایل کاربری
+            </a>
+            <a href="#">
+                <i class="mj mj-user"></i>
+                کاربران
+            </a>
+            <a href="#">
+                <i class="mj mj-setting-3"></i>
+                تنظیمات
+            </a>
+            <a href="#" class="menu-logout">
+                <i class="mj mj-logout"></i>
+                خروج از حساب
+            </a>
+        </nav>
+    </aside><!--.sidebar-->
+    <main class="main">
+        <header>
+            <i class="mj mj-user"></i>
+            <h1>ویرایش پروفایل</h1>
+        </header>
+        <div class="main-content">
+
+            <form action="#" id="form-edit-profile">
+                <div class="form-group profile-image">
+                    <label for="avatar">تصویر پروفایل</label>
+                    <div class="profile-image-actions">
+                        <div class="profile-image-container">
+                            <span class="profile-upload-progress"></span>
+                            <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="64" height="64">
+                        </div>
+                        <label for="avatar" class="btn btn-secondary">تغییر تصویر</label>
+                        <input type="file" id="avatar" name="avatar" style="display: none">
+                        <a href="#" class="btn btn-delete delete-profile">حذف تصویر</a>
+                    </div>
+                </div><!--.profile-image-->
+
+                <div class="form-group">
+                    <label for="phone">تلفن همراه</label>
+                    <div class="inline-input">
+                        <input type="text" disabled name="phone" id="phone" class="form-control ltr" value="09123456789">
+                        <span class="text-light">غیر قابل تغییر</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">نام کاربری</label>
+                    <div class="inline-input">
+                        <input type="text" name="username" id="username" class="form-control ltr" value="u3215">
+                        <div class="username-check">
+                            <div class="username-error">
+                                <i class="mj mj-close-circle"></i>
+                                <p>نام کاربری قبلا استفاده شده است</p>
+                            </div>
+                            <div class="checking">
+                                <img src="images/loading-spinner-primary.svg" alt="spinner" width="16" height="16">
+                                در حال بررسی نام کاربری
+                            </div>
+                            <div class="username-success">
+                                <i class="mj mj-tick-circle"></i>
+                                <p>نام کاربری برای استفاده آزاد است</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="first_name">نام</label>
+                    <div class="inline-input">
+                        <input type="text" name="first_name" id="first_name" class="form-control" value="حامد">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">نام</label>
+                    <div class="inline-input">
+                        <input type="text" name="last_name" id="last_name" class="form-control" value="مودی">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user_role">نقش کاربر</label>
+                    <div class="inline-input">
+                        <select name="user_role" id="user_role" class="form-control">
+                            <option value="subscriber">کاربر مشترک</option>
+                            <option value="author">نویسنده</option>
+                            <option value="admin">مدیریت</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary">
+                    ذخیره تغییرات
+                </button>
+
+            </form><!--#form-edit-profile-->
+
+        </div><!--.main-content-->
+    </main><!--.main-->
+</div>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/select2.full.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

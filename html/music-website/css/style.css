@@ -18,6 +18,7 @@
     --color-warning-light: #FAF5E3;
 
     --color-text: #242424;
+    --color-text-light: #A7A7A7;
 
     --gradient-primary: linear-gradient(90deg, var(--color-accent), var(--color-primary));
 
@@ -52,6 +53,9 @@ body,input,textarea, select, button{
     direction: ltr;
     text-align: left;
 }
+.text-light{
+    color: var(--color-text-light);
+}
 /** Button: Start */
 .btn{
     display: flex;
@@ -66,6 +70,15 @@ body,input,textarea, select, button{
     transition: 0.3s;
     text-decoration: none;
     outline-style: none;
+}
+.btn.btn-secondary {
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.btn.btn-delete{
+    color: var(--color-error);
+    background: var(--color-error-light);
 }
 .btn.btn-outline{
     color: var(--color-text);
@@ -113,6 +126,10 @@ input.form-control,textarea.form-control,select.form-control{
     margin-top: 10px;
     outline-style: none;
     transition: 0.3s;
+}
+
+input:read-only{
+    background: #f6f6f6;
 }
 
 input.form-control:focus, textarea.form-control:focus{
@@ -753,7 +770,7 @@ span.comment-count.unread-comment:before {
 /** Edit Music: Start */
 form.form-save-music {
     display: grid;
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 340px;
     gap: 15px;
 }
 .music-metas {
@@ -853,8 +870,8 @@ label.cover-uploader p:not(.click-for-upload) {
     background-size: cover;
     border-radius: 15px;
     transition: 0.3s;
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
 }
 .cover-container.uploaded .uploaded-image{
     visibility: visible;
@@ -869,4 +886,296 @@ label.cover-uploader p:not(.click-for-upload) {
     cursor: pointer;
 }
 
+.btn-upload-music {
+    background: var(--color-primary);
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+.music-uploader input {
+    display: none;
+}
+
+.music-uploader {
+    padding: 10px;
+    border: 1px dashed var(--color-text);
+    border-radius: 20px;
+    margin-top: 25px;
+    background: #FBFBFB;
+}
+
+.music-uploader label {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.music-uploader label img {
+    width: 64px;
+    height: 64px;
+}
+
+.music-uploader label p{
+    color: var(--color-text-light)
+}
+
+.music-uploader .upload-music-text {
+    font-size: 14px;
+}
+
+
+.music-uploader .music-quality {
+    position: absolute;
+    left: 5px;
+    top: -15px;
+    font-size: 14px;
+    border: 1px solid #FFF;
+    background: var(--color-success-light);
+    color: var(--color-success);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.music-uploader .quality-128{
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.music-item {
+    direction: ltr;
+    text-align: left;
+}
+
+.music-uploader.selected label{
+    display: none;
+}
+
+.music-uploader:not(.selected) .music-item{
+    display: none;
+}
+
+.music-uploader {
+    position: relative;
+}
+
+.music-uploader .music-cancel-upload {
+    background: var(--color-error-light);
+    color: var(--color-error);
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.music-uploader .music-item-title {
+    margin-right: 25px;
+}
+
+.music-uploader .music-item-title .music-size {
+    background: #E2E2E2;
+    color: var(--color-text-light);
+    font-size: 14px;
+    padding: 0 5px;
+    border-radius: 6px;
+}
+
+p.music-item-title svg > * {
+    fill: var(--color-warning);
+}
+
+p.music-item-title svg,p.music-item-title i{
+    display: none;
+}
+
+p.music-item-title svg {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 5px;
+}
+
+p.music-item-title .mj-tick-circle {
+    color: var(--color-success);
+}
+
+p.music-item-title .mj-close-circle {
+    color: var(--color-error);
+}
+.music-uploader.uploading{
+    border-color: var(--color-warning)
+}
+.music-uploader.uploading .music-item-title svg{
+    display: inline;
+}
+.music-uploader.error{
+    border-color: var(--color-error)
+}
+.music-uploader.error .music-item-title .mj-close-circle{
+    display: inline;
+}
+.music-uploader.error .error-text{
+    display: flex;
+}
+
+.music-uploader.uploaded{
+    border-color: var(--color-success)
+}
+.music-uploader.uploaded .music-item-title .mj-tick-circle{
+    display: inline;
+}
+
+.music-uploader audio {
+    width: 100%;
+}
+
+.upload-progress-bar {
+    margin: 25px 0;
+    background: #F2F2F2;
+    border-radius: 8px;
+    height: 7px;
+    position: relative;
+}
+
+.upload-progress-bar .upload-progress {
+    width: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--gradient-primary);
+    border-radius: 8px;
+    transition: linear 0.3s;
+}
+
+.upload-progress-bar span {
+    background: #2D2C2C;
+    color: #FFF;
+    font-size: 13px;
+    padding: 0 5px;
+    border-radius: 5px;
+    top: -25px;
+    width: 40px;
+    right: -20px;
+    text-align: center;
+    position: absolute;
+}
+
+.upload-progress-bar span:before {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    right: 15px;
+    border: 5px solid transparent;
+    border-top-color: #2D2C2C;
+}
+
+.music-uploader p.error-text {
+    direction: rtl;
+    text-align: right;
+    background: var(--color-error-light);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: var(--color-error);
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.music-uploader.error .upload-progress-bar .upload-progress{
+    background: var(--color-error)
+}
 /** Edit Music: End */
+
+/** Profile: Start */
+.profile-image-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.profile-image-actions img {
+    border-radius: 50%;
+}
+
+.profile-image-actions .btn {
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image-container {
+    background: red;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-upload-progress {
+    background: rgb(255 255 255 / 50%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}
+
+.inline-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#form-edit-profile .form-control {
+    width: 300px;
+}
+
+.username-error {
+    color: var(--color-error);
+}
+
+.username-success {
+    color: var(--color-success);
+}
+
+.checking {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-text-light);
+}
+.username-check{
+    margin-top: 10px;
+}
+
+.username-check div {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.username-check.checking .checking {
+    display: flex;
+}
+
+.username-check.error .username-error {
+    display: flex;
+}
+
+.username-check.success .username-success {
+    display: flex;
+}
+
+/** Profile: End */
