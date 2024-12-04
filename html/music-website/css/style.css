@@ -1204,16 +1204,17 @@ p.music-item-title .mj-close-circle {
 .cropper-box .croppie {
     width: 500px;
     aspect-ratio: 16/9;
-    background: red;
     margin-bottom: 15px;
+
 }
 
 .cropper-footer {
     display: flex;
     gap: 15px;
+    margin-top: 50px;
 }
 
-.cropper-footer a {
+.cropper-footer button {
     width: 150px;
 }
 
