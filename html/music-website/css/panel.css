@@ -46,6 +46,15 @@ body{
     justify-content: center;
 }
 
+.flex-cc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-col{
+    flex-direction: column;
+}
+
 body,input,textarea, select, button{
     font-family: YekanBakh, serif;
 }
@@ -321,6 +330,11 @@ input.form-control:focus, textarea.form-control:focus{
     display: grid;
     grid-template-columns: 280px auto;
 }
+
+.panel-container.full-width{
+    width: calc( 100% - 50px );
+}
+
 .sidebar {
     background: #F8F8F8;
     border-left: 1px solid #DFDFDF;
@@ -602,6 +616,7 @@ span.comment-count.unread-comment:before {
     position: relative;
     color: #b7b7b7;
     font-size: 14px;
+    display: inline-block;
 }
 
 .status:before {
@@ -849,6 +864,7 @@ form.form-save-music {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -1223,4 +1239,139 @@ p.music-item-title .mj-close-circle {
     opacity: 1;
 }
 
+#table-comments .comment-text{
+    font-size: 14px;
+}
+
 /** Profile: End */
+
+/** Artis: Start */
+.panel-main-content-cols {
+    display: grid;
+    grid-template-columns: 400px auto;
+    gap: 30px;
+    align-items: center;
+}
+.artist-form-cols {
+    display: grid;
+    grid-template-columns: auto 130px;
+    gap: 10px;
+    align-items: center;
+}
+
+.artist-col-avatar {
+    border: 1px dashed #707070;
+    background: #F2F2F2;
+    border-radius: 15px;
+    aspect-ratio: 1;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-text-light);
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.artist-col-avatar label i.mj-image {
+    display: block;
+    margin: 7px 0;
+    font-size: 40px;
+}
+
+.artist-col-avatar label{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.artist-col-avatar.file-hover{
+    border-color: var(--color-warning)
+}
+.artist-avatar-image {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: red;
+    border-radius: 15px;
+    display: none;
+}
+
+.artist-col-avatar.uploaded .artist-avatar-image{
+    display: block;
+}
+
+.remove-artist-avatar {
+    position: absolute;
+    color: var(--color-error);
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+}
+
+.artist-avatar-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.artist-avatar-status{
+    display: none;
+}
+
+.artist-avatar-status.uploading-error {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: white;
+    border-radius: 15px;
+    color: var(--color-error);
+}
+
+.artist-col-avatar.file-hover .click-for-upload{
+    display: none;
+}
+
+.artist-col-avatar.file-hover .upload-drop-text{
+    display: flex;
+}
+
+.artist-col-avatar.error .uploading-error{
+    display: flex;
+}
+
+.artist-col-avatar.uploading .uploading-status{
+    display: flex;
+}
+.artist-avatar-status.uploading-status {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+}
+
+.artist-avatar-status.uploading-status .avatar-uploading-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(3px);
+    background: #ffffff70;
+    border-radius: 10px;
+    color: black;
+}
+
+/** Artis: End */
