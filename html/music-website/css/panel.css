@@ -777,10 +777,17 @@ span.comment-count.unread-comment:before {
 .select2-container--default li.select2-selection__choice .select2-selection__choice__remove{
     color: var(--color-error);
 }
-.select2-container--default .select2-selection--multiple {
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single{
     border-color: #CDCDCD !important;
     border-radius: 10px !important;
 }
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 42px;
+}
+
 /** Select2 Overwrite: End */
 
 /** Edit Music: Start */
@@ -903,7 +910,7 @@ label.cover-uploader p:not(.click-for-upload) {
     cursor: pointer;
 }
 
-.btn-upload-music {
+.btn-upload {
     background: var(--color-primary);
     padding: 2px 10px;
     border-radius: 5px;
@@ -1250,7 +1257,6 @@ p.music-item-title .mj-close-circle {
     display: grid;
     grid-template-columns: 400px auto;
     gap: 30px;
-    align-items: center;
 }
 .artist-form-cols {
     display: grid;

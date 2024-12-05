@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>موزیکجویار - خواننده ها</title>
+    <title>موزیکجویار - دسته بندی ها</title>
     <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
-    <link href="css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/panel.css">
-    <link rel="stylesheet" href="css/musicjooyar-icons.css">
+    <link href="../css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/musicjooyar-icons.css">
 </head>
 <body>
 
@@ -15,9 +15,9 @@
     <aside class="sidebar">
         <div class="sidebar-header">
             <a href="#" class="sidebar-logo">
-                <img src="images/logo-animated.svg" alt="Musicjooyar" width="210" height="105">
+                <img src="../images/logo-animated.svg" alt="Musicjooyar" width="210" height="105">
             </a>
-            <img src="images/hamedmoody.jpg" alt="حامد مودی" class="sidebar-avatar" width="512" height="512">
+            <img src="../images/hamedmoody.jpg" alt="حامد مودی" class="sidebar-avatar" width="512" height="512">
             <strong>حامد مودی</strong>
             <span>09123456789</span>
         </div><!--.sidebar-header-->
@@ -75,54 +75,20 @@
 
             <div class="panel-main-content-cols">
                 <form action="#" id="artist-form">
-                    <div class="artist-form-cols">
-                        <div class="artist-col-names">
-                            <div class="form-group">
-                                <label for="name">نام</label>
-                                <input type="text" id="name" name="name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="family">نام خانواگی</label>
-                                <input type="text" id="family" name="family" class="form-control">
-                            </div>
-                        </div>
-                        <div class="artist-col-avatar uploaded"><!-- .uploaded, .uploading, .error, .file-hover -->
-                            <label for="artist_avatar" class="flex-cc flex-col">
-                                <i class="mj mj-image"></i>
-                                <p>تصویر خواننده</p>
-                                <p class="click-for-upload">کلیک کنید</p>
-                                <p class="artist-avatar-status upload-drop-text">
-                                      رها کنید
-                                </p>
-                                <p class="artist-avatar-status uploading-error flex-cc">
-                                    خطا در آپلود فایل
-                                </p>
-                                <div class="artist-avatar-status uploading-status" style="background-image: url('images/hamedmoody.jpg')">
-                                    <div class="avatar-uploading-text">
-                                        در حال بارگذاری فایل:
-                                        <strong class="uploading-percent">2%</strong>
-                                    </div>
-                                </div>
-                            </label>
-
-                            <input type="file" name="artist_avatar" id="artist_avatar" accept="image/*" style="display: none;">
-                            <div class="artist-avatar-image">
-                                <i class="mj mj-trash remove-artist-avatar"></i>
-                                <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="64" height="64">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group has-unit">
-                        <label for="birthdate">تاریخ تولد</label>
-                        <input type="text" id="birthdate" name="birthdate" class="form-control">
-                        <div class="unit">
-                            <i class="mj mj-calendar-edit"></i>
-                        </div>
+                    <h2>ثبت/ویرایش دسته بندی</h2>
+                    <div class="form-group">
+                        <label for="category_name">نام</label>
+                        <input type="text" id="category_name" name="category_name" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="description">زندگینامه</label>
-                        <textarea id="description" rows="5" name="description" class="form-control"></textarea>
+                        <label for="category_parent">نام خانواگی</label>
+                        <select name="category_parent" id="category_parent"  class="form-control select2" style="width: 100%">
+                            <option value="1">پاپ</option>
+                            <option value="2">رپ</option>
+                            <option value="3">عروسی</option>
+                        </select>
                     </div>
+
                     <button class="btn btn-full">ثبت</button>
                 </form>
 
@@ -160,13 +126,13 @@
                         <table id="table-comments">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th style="width: 40px;">#</th>
                                 <th>
-                                    خواننده
+                                    دسته
                                 </th>
-                                <th>ت تولد</th>
-
-                                <th>عملیات</th>
+                                <th>والد</th>
+                                <th style="width: 80px;">تعداد</th>
+                                <th style="width: 80px;">عملیات</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -174,13 +140,13 @@
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    <div class="row-title">
-                                        <img src="images/hamedmoody.jpg" alt="Music Cover" width="32" height="32">
-                                        حامد مودی
-                                    </div>
+                                    رپ
                                 </td>
-                                <td class="ltr">
-                                    1374/01/16
+                                <td>
+                                    نوین
+                                </td>
+                                <td>
+                                    <a href="#">21</a>
                                 </td>
                                 <td>
                                     <a href="#" class="action action-delete">
@@ -192,26 +158,7 @@
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <div class="row-title">
-                                        <img src="images/hamedmoody.jpg" alt="Music Cover" width="32" height="32">
-                                        حامد مودی
-                                    </div>
-                                </td>
-                                <td class="ltr">
-                                    1374/01/16
-                                </td>
-                                <td>
-                                    <a href="#" class="action action-delete">
-                                        <i class="mj mj-trash"></i>
-                                    </a>
-                                    <a href="#" class="action action-edit">
-                                        <i class="mj mj-edit-2"></i>
-                                    </a>
-                                </td>
-                            </tr>
+
 
 
 
@@ -257,8 +204,8 @@
     </main><!--.main-->
 </div>
 
-<script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/select2.full.min.js"></script>
-<script src="js/script.js"></script>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script src="../js/select2.full.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ورود - ثبت/ویرایش موزیک</title>
     <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
-    <link href="css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/panel.css">
-    <link rel="stylesheet" href="css/musicjooyar-icons.css">
+    <link href="../css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/musicjooyar-icons.css">
 </head>
 <body>
     <div class="panel-container glow-box">
         <aside class="sidebar">
             <div class="sidebar-header">
                 <a href="#" class="sidebar-logo">
-                    <img src="images/logo-animated.svg" alt="Musicjooyar" width="210" height="105">
+                    <img src="../images/logo-animated.svg" alt="Musicjooyar" width="210" height="105">
                 </a>
-                <img src="images/hamedmoody.jpg" alt="حامد مودی" class="sidebar-avatar" width="512" height="512">
+                <img src="../images/hamedmoody.jpg" alt="حامد مودی" class="sidebar-avatar" width="512" height="512">
                 <strong>حامد مودی</strong>
                 <span>09123456789</span>
             </div><!--.sidebar-header-->
@@ -85,7 +85,7 @@
                         <div class="form-group">
                             <label for="q320">
                                 آدرس فایل صوتی با کیفیت 320
-                                <span class="btn-upload-music">آپلود</a>
+                                <span class="btn-upload">آپلود</a>
                             </label>
                             <input type="url" name="q320" class="form-control ltr" placeholder="" readonly>
                             <input type="file" id="q320" accept="audio/mpeg" name="q320" style="display: none">
@@ -93,7 +93,7 @@
                         <div class="form-group">
                             <label for="q128">
                                 آدرس فایل صوتی با کیفیت 128
-                                <span class="btn-upload-music">آپلود</span>
+                                <span class="btn-upload">آپلود</span>
                             </label>
                             <input type="url" name="q128" class="form-control ltr" placeholder="" readonly>
                             <input type="file" id="q128" accept="audio/mpeg" name="q128" style="display: none">
@@ -138,8 +138,8 @@
                         <div class="cover-container"><!-- .file-hover, .error, .uploading, .uploaded -->
                             <label for="cover" class="cover-uploader">
                                 <div class="cover-uploader-icons">
-                                    <img src="images/icon-png.png" alt="Png" class="icon-png" width="142" height="142">
-                                    <img src="images/icon-jpg.png" alt="Png" class="jpg" width="142" height="142">
+                                    <img src="../images/icon-png.png" alt="Png" class="icon-png" width="142" height="142">
+                                    <img src="../images/icon-jpg.png" alt="Png" class="jpg" width="142" height="142">
                                 </div>
                                 <p>کاور و تصویر موزیک را به اینجا بکشید</p>
                                 <p>یا</p>
@@ -151,21 +151,21 @@
                                 <p class="uploading-error">
                                     خطا در آپلود فایل
                                 </p>
-                                <div class="uploading-status" style="background-image: url('images/music-cover.jpg')">
+                                <div class="uploading-status" style="background-image: url('../images/music-cover.jpg')">
                                     <div class="uploading-text">
                                         در حال بارگذاری فایل:
                                         <strong class="uploading-percent">2%</strong>
                                     </div>
                                 </div>
                             </label>
-                            <div class="uploaded-image" style="background-image: url('images/music-cover.jpg')">
+                            <div class="uploaded-image" style="background-image: url('../images/music-cover.jpg')">
                                 <i class="mj mj-trash delete-cover"></i>
                             </div>
                         </div><!--.cover-container-->
 
                         <div class="music-uploader"><!-- .selected, .uploading, .uploaded, .error -->
                             <label for="music128">
-                                <img src="images/icon-mp3.png" alt="Mp3" width="92" height="92" loading="lazy">
+                                <img src="../images/icon-mp3.png" alt="Mp3" width="92" height="92" loading="lazy">
                                 <div class="upload-music-text">
                                     <p>موزیک/صوت را به اینجا بکشید</p>
                                     <strong>یا کلیک کنید</strong>
@@ -197,7 +197,7 @@
 
                         <div class="music-uploader"><!-- .selected, .uploading, .uploaded, .error -->
                             <label for="music320">
-                                <img src="images/icon-mp3.png" alt="Mp3" width="92" height="92" loading="lazy">
+                                <img src="../images/icon-mp3.png" alt="Mp3" width="92" height="92" loading="lazy">
                                 <div class="upload-music-text">
                                     <p>موزیک/صوت را به اینجا بکشید</p>
                                     <strong>یا کلیک کنید</strong>
@@ -234,8 +234,8 @@
         </main><!--.main-->
     </div>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/select2.full.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/select2.full.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
