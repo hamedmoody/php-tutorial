@@ -23,7 +23,7 @@
         </div><!--.sidebar-header-->
         <nav class="sidebar-menu">
             <h2>منوی اصلی</h2>
-            <a href="index.html" class="active">
+            <a href="index.html">
                 <i class="mj mj-element-3"></i>
                 پیشخوان
             </a>
@@ -40,7 +40,7 @@
                 <i class="mj mj-category"></i>
                 دسته بندی
             </a>
-            <a href="favorites.html">
+            <a href="favorites.html" class="active">
                 <i class="mj mj-heart-tick"></i>
                 علاقمندی ها
             </a>
@@ -69,41 +69,10 @@
     <main class="main">
         <header>
             <i class="mj mj-category"></i>
-            <h1>پیشخوان</h1>
+            <h1>علاقمندی کاربران</h1>
         </header>
         <div class="main-content">
 
-            <div class="widget-stats">
-                <div class="stat stat-comments">
-                    <i class="mj mj-message"></i>
-                    <strong>1,120</strong>
-                    <span>دیدگاه</span>
-                </div>
-                <div class="stat stat-artists">
-                    <i class="mj mj-microphone-2"></i>
-                    <strong>1,120</strong>
-                    <span>هنرمند</span>
-                </div>
-                <div class="stat stat-musics">
-                    <i class="mj mj-music"></i>
-                    <strong>1,120</strong>
-                    <span>موزیک</span>
-                </div>
-                <div class="stat stat-view">
-                    <i class="mj mj-eye"></i>
-                    <strong>1,120</strong>
-                    <span>بازدید</span>
-                </div>
-                <div class="stat stat-view">
-                    <i class="mj mj-eye"></i>
-                    <strong>1,120</strong>
-                    <span>بازدید</span>
-                </div>
-            </div><!--.widget-stats-->
-            <div class="view-chart">
-                <h2>بازدید اخیر</h2>
-                <div id="chart" style="height: 300px;"></div>
-            </div>
 
         </div><!--.main-content-->
     </main><!--.main-->
@@ -111,25 +80,6 @@
 
 <script src="../js/jquery-3.7.1.min.js"></script>
 <script src="../js/select2.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="../js/script.js"></script>
-<script>
-    var options = {
-        chart: {
-            type: 'area'
-        },
-        series: [{
-            name: 'sales',
-            data: [30,40,35,50,49,60,70,91,125]
-        }],
-        xaxis: {
-            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-        }
-    }
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-    chart.render();
-</script>
 </body>
 </html>
