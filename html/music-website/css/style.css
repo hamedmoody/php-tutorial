@@ -130,6 +130,7 @@ a.logo img {
     top: calc( 100% + 5px );
     border: 1px solid #edeaea;
     display: none;
+    z-index: 9;
 }
 
 .search-box.show-results .search-result{
@@ -182,6 +183,10 @@ a.logo img {
     color: #aaaaaa;
 }
 
+.search-no-result {
+    padding: 15px;
+    color: var(--color-error);
+}
 
 
 .menu-left {
@@ -293,16 +298,18 @@ section header{
 section header h2 {
     font-size: 28px;
 }
-section header i{
-
+h1 i,
+h2 i,
+h3 i{
     font-size: 25px;
     width: 30px;
-
     color: var(--color-primary);
     position: relative;
-
+    margin-left: 10px;
 }
-section header i:after{
+h1 i:after,
+h2 i:after,
+h3 i:after{
     background: url('../images/circle-curve.svg') no-repeat;
     width: 45px;
     height: 45px;
@@ -478,7 +485,7 @@ section header i:after{
 
 .music-container header {
     display: grid;
-    grid-template-columns: 196px auto;
+    grid-template-columns: 264px auto;
     gap: 15px;
     margin-bottom: 30px;
 }
@@ -550,6 +557,12 @@ section header i:after{
 .music-date {
     font-size: 15px;
     color: var(--color-text-light);
+}
+
+.music-download {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .btn.favorite{
@@ -630,8 +643,199 @@ section header i:after{
     height: auto;
 }
 
+.comment-form {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.comment-form > p {
+    margin: 15px 0;
+}
+
+.form-comment-message label {
+    font-weight: bold;
+}
+
+.form-comment-message div {
+    display: flex;
+    gap: 15px;
+}
+
+.form-comment-message img {
+    margin-top: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
 
 
+
+
+
+.comment-list-section {
+    margin-top: 25px;
+}
+
+.comment-list-section h2{
+    margin-bottom: 15px;
+}
+
+.comment-item {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-item header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-item header > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-actions .btn {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.commenter > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.commenter img {
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    padding: 2px;
+}
+
+.comment-date {
+    color: var(--color-text-light);
+    font-size: 14px;
+}
+
+.comment-item .commenter {
+    gap: 25px;
+}
+
+.comment-actions {
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.comment-item:hover > header > .comment-actions {
+    opacity: 1;
+}
+
+.comment-content {
+    margin-top: 15px;
+}
+
+
+.comment-pending {
+    color: var(--color-warning);
+    background: var(--color-warning-light);
+    padding: 2px 17px 2px 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.comment-pending:before {
+    content: "";
+    background: var(--color-warning);
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 6px;
+}
+
+.comment-item .comment-item {
+    border: 1px solid #EBE7E7;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-right: 32px;
+}
+
+.comment-status-pending{
+    border: 1px solid var(--color-warning) !important;
+}
+
+
+#reply-comment {
+    border: 2px solid var(--color-primary);
+    margin-top: 15px;
+    padding: 15px;
+}
+
+#reply-comment header .cancel-reply {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+#reply-comment header .cancel-reply i {
+    font-size: 12px;
+}
+
+
+
+
+.sidebar-widget {
+    background: #FFF;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.sidebar-widget h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sidebar-music-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+    padding: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar-music-data {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar-music-title strong {
+    display: block;
+}
+
+.sidebar-music-title span {
+    color: var(--color-text-light);
+}
+
+.sidebar-music-list a img {
+    border-radius: 8px;
+    width: 42px;
+    height: auto;
+}
+
+.sidebar-music-list a:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.sidebar-music-list a > span {
+    color: var(--color-text-light);
+    font-size: 14px;
+}
 
 
 

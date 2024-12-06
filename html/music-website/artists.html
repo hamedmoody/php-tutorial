@@ -23,9 +23,10 @@
                 </a>
             </div>
         </div>
-        <div class="search-box">
-            <form action="">
-                <input type="search" id="search" name="search" placeholder="جستجو کنید">
+        <div class="search-box"><!-- .show-results -->
+            <form action=""><!-- .loading -->
+                <label for="search" style="font-size: 0">جستجو در سایت</label>
+                <input type="search" id="search" name="search" placeholder="جستجو کنید"/>
                 <button>
                     <i class="mj mj-search-normal-1"></i>
                     <img src="images/loading-spinner.svg" alt="Loader" width="36" height="36">
@@ -73,6 +74,9 @@
                         </div>
                         <span class="music-result-duration">04:18</span>
                     </a>
+                </div>
+                <div class="search-no-result">
+                    نتیجه ای یافت نشد
                 </div>
                 <!--<a href="#" class="btn btn-primary btn-full">
                     مشاهده همه نتایج

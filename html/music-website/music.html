@@ -23,9 +23,10 @@
                 </a>
             </div>
         </div>
-        <div class="search-box">
-            <form action="">
-                <input type="search" id="search" name="search" placeholder="جستجو کنید">
+        <div class="search-box"><!-- .show-results -->
+            <form action=""><!-- .loading -->
+                <label for="search" style="font-size: 0">جستجو در سایت</label>
+                <input type="search" id="search" name="search" placeholder="جستجو کنید"/>
                 <button>
                     <i class="mj mj-search-normal-1"></i>
                     <img src="images/loading-spinner.svg" alt="Loader" width="36" height="36">
@@ -73,6 +74,9 @@
                         </div>
                         <span class="music-result-duration">04:18</span>
                     </a>
+                </div>
+                <div class="search-no-result">
+                    نتیجه ای یافت نشد
                 </div>
                 <!--<a href="#" class="btn btn-primary btn-full">
                     مشاهده همه نتایج
@@ -169,6 +173,16 @@
                                 <span class="fav-loading-text">صبر کنید</span>
                             </button>
                         </div><!--.music-favorite-->
+                        <div class="music-download">
+                            <a href="#" class="btn btn-success">
+                                <i class="mj mj-download"></i>
+                                دانلود با کیفیک 128
+                            </a>
+                            <a href="#" class="btn btn-success-solid">
+                                <i class="mj mj-download"></i>
+                                دانلود با کیفیک 320
+                            </a>
+                        </div><!--.music-download-->
                     </div><!--.music-info-->
                 </header>
                 <audio src="" controls class="music-player"></audio>
@@ -209,17 +223,275 @@
                         حساب کاربری
                     </a>
                     شوید
-                </div>
+                </div><!--.login-to-comment-->
                 <div class="no-comment">
                     <img src="images/no-comments.svg" alt="No Comments" width="502" height="194">
                     <p>هنوز دیدگاهی ثبت نشده است</p>
-                </div>
+                </div><!--.no-comment-->
+
+                <form id="submit-comment" class="comment-form" action="">
+                    <h2>
+                        <i class="mj mj-message"></i>
+                        ثبت دیدگاه
+                    </h2>
+                    <p>
+                        <strong>حامد مودی</strong>
+                        عزیز، لطفاً دثدگاه خود را درباره
+                        <strong>عصر جدید مرتضی پاشایی</strong>
+                        ثبت کنید
+                    </p>
+                    <div class="form-group form-comment-message">
+                        <label for="comment">متن دیدگاه شما</label>
+                        <div>
+                            <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32">
+                            <textarea name="comment" id="comment" class="form-control" cols="30" rows="5" placeholder="دیدگاه شما"></textarea>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">ثبت دیدگاه</button>
+                </form><!--#submit-comment-->
+
+            </div><!--#comments-->
+
+            <div class="comment-list-section">
+                <h2>15 دیدگاه برای این موزیک ثبت شده است</h2>
+                <div class="comment-list">
+
+                    <div class="comment-item">
+                        <header>
+                            <div class="commenter">
+                                <div class="comment-author">
+                                    <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32" loading="lazy">
+                                    <span>حامد مودی</span>
+                                </div>
+                                <div class="comment-date">
+                                    <i class="mj mj-calendar-edit"></i>
+                                    15 مهر 1405 ساعت 16:15
+                                </div>
+                            </div><!--.commenter-->
+                            <div class="comment-actions">
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="mj mj-arrow-reply"></i>
+                                    پاسخ به دیدگاه
+                                </a>
+                                <a href="#" class="btn comment-like btn-success">
+                                    <i class="mj mj-like-1"></i>
+                                    <span>12</span>
+                                </a>
+                                <a href="#" class="btn comment-dislike btn-error">
+                                    <i class="mj mj-dislike-1"></i>
+                                    <span>4</span>
+                                </a>
+                            </div><!--.comment-actions-->
+                        </header>
+                        <div class="comment-content">
+                            <p>من امروز دوره کاتلین رایگان را تمام کردم</p>
+                            <p>مطالب را شیرین و کاربردی و قابل فهم بیان میکنید</p>
+                        </div>
+                    </div><!--.comment-item-->
+
+                    <div class="comment-item comment-has-reply">
+                        <header>
+                            <div class="commenter">
+                                <div class="comment-author">
+                                    <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32" loading="lazy">
+                                    <span>حامد مودی</span>
+                                </div>
+                                <div class="comment-date">
+                                    <i class="mj mj-calendar-edit"></i>
+                                    15 مهر 1405 ساعت 16:15
+                                </div>
+                            </div><!--.commenter-->
+                            <div class="comment-actions">
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="mj mj-arrow-reply"></i>
+                                    پاسخ به دیدگاه
+                                </a>
+                                <a href="#" class="btn comment-like btn-success">
+                                    <i class="mj mj-like-1"></i>
+                                    <span>12</span>
+                                </a>
+                                <a href="#" class="btn comment-dislike btn-error">
+                                    <i class="mj mj-dislike-1"></i>
+                                    <span>4</span>
+                                </a>
+                            </div><!--.comment-actions-->
+                        </header>
+                        <div class="comment-content">
+                            <p>من امروز دوره کاتلین رایگان را تمام کردم</p>
+                            <p>مطالب را شیرین و کاربردی و قابل فهم بیان میکنید</p>
+
+                            <div class="comment-item comment-reply-item comment-status-pending">
+                                <header>
+                                    <div class="commenter">
+                                        <div class="comment-author">
+                                            <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32" loading="lazy">
+                                            <span>حامد مودی</span>
+                                        </div>
+                                        <div class="comment-date">
+                                            <i class="mj mj-calendar-edit"></i>
+                                            15 مهر 1405 ساعت 16:15
+                                        </div>
+                                        <div class="comment-pending">
+                                            منتظر تأیید
+                                        </div>
+                                    </div><!--.commenter-->
+                                    <div class="comment-actions">
+                                        <a href="#" class="btn btn-secondary">
+                                            <i class="mj mj-arrow-reply"></i>
+                                            پاسخ به دیدگاه
+                                        </a>
+                                        <a href="#" class="btn comment-like btn-success">
+                                            <i class="mj mj-like-1"></i>
+                                            <span>12</span>
+                                        </a>
+                                        <a href="#" class="btn comment-dislike btn-error">
+                                            <i class="mj mj-dislike-1"></i>
+                                            <span>4</span>
+                                        </a>
+                                    </div><!--.comment-actions-->
+                                </header>
+                                <div class="comment-content">
+                                    <p>من امروز دوره کاتلین رایگان را تمام کردم</p>
+                                    <p>مطالب را شیرین و کاربردی و قابل فهم بیان میکنید</p>
+                                </div>
+                            </div><!--.comment-item-->
+
+                        </div>
+                    </div><!--.comment-item-->
+
+
+                    <div class="comment-item">
+                        <header>
+                            <div class="commenter">
+                                <div class="comment-author">
+                                    <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32" loading="lazy">
+                                    <span>حامد مودی</span>
+                                </div>
+                                <div class="comment-date">
+                                    <i class="mj mj-calendar-edit"></i>
+                                    15 مهر 1405 ساعت 16:15
+                                </div>
+                            </div><!--.commenter-->
+                            <div class="comment-actions">
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="mj mj-arrow-reply"></i>
+                                    پاسخ به دیدگاه
+                                </a>
+                                <a href="#" class="btn comment-like btn-success">
+                                    <i class="mj mj-like-1"></i>
+                                    <span>12</span>
+                                </a>
+                                <a href="#" class="btn comment-dislike btn-error">
+                                    <i class="mj mj-dislike-1"></i>
+                                    <span>4</span>
+                                </a>
+                            </div><!--.comment-actions-->
+                        </header>
+                        <div class="comment-content">
+                            <p>من امروز دوره کاتلین رایگان را تمام کردم</p>
+                            <p>مطالب را شیرین و کاربردی و قابل فهم بیان میکنید</p>
+                        </div>
+
+                        <form id="reply-comment" class="comment-form" action="">
+                            <header>
+                                <h2>
+                                    <i class="mj mj-message"></i>
+                                    <span>ارسال پاسخ به «علیرضا اکبری»</span>
+                                </h2>
+                                <a href="#" class="btn btn-error cancel-reply">
+                                    <i class="mj mj-close"></i>
+                                    انصراف از پاسخ
+                                </a>
+                            </header>
+                            <div class="form-group form-comment-message">
+                                <label for="reply-comment-field">متن پاسخ شما</label>
+                                <div>
+                                    <img src="images/hamedmoody.jpg" alt="Hamed Moodi" width="32" height="32">
+                                    <textarea name="comment" id="reply-comment-field" class="form-control" cols="30" rows="5" placeholder="پاسخ شما"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">ثبت پاسخ</button>
+                        </form><!--#submit-comment-->
+
+                    </div><!--.comment-item-->
+
+
+                </div><!--.comment-list-->
             </div>
 
         </div>
-        <div class="music-sibebar">
-            
-        </div>
+        <div class="music-sidebar">
+
+            <div class="sidebar-widget">
+                <h3>
+                    <i class="mj mj-microphone-2"></i>
+                    سایر موزیک های مرتضی پاشایی
+                </h3>
+                <div class="sidebar-music-list">
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                    <a href="#">
+                        <div class="sidebar-music-data">
+                            <img src="images/music-cover.jpg" alt="Asre Paeezi" width="48" height="48" loading="lazy">
+                            <div class="sidebar-music-title">
+                                <strong>عصر پاییزی</strong>
+                                <span>مرتضی پاشایی</span>
+                            </div>
+                        </div>
+                        <span>04:17</span>
+                    </a>
+                </div><!--.sidebar-music-list-->
+            </div><!--.sidebar-widget-->
+
+        </div><!--.music-sidebar-->
     </div>
     
     

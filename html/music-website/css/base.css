@@ -1,9 +1,9 @@
 :root {
-    --color-primary: #735BFF;
+    --color-primary: #AC4FFF;
     --color-primary-light: #EAE6FF;
-    --color-accent: #AC4FFF;
+    --color-accent: #5C40FF;
 
-    --color-secondary: #729CFE;
+    --color-secondary: #5C40FF;
 
     --color-success: #00CE30;
     --color-success-light: #E3FAE8;
@@ -87,10 +87,22 @@ button{
     background: var(--color-primary-light);
 }
 
-.btn.btn-delete{
+.btn.btn-delete,
+.btn.btn-error{
     color: var(--color-error);
     background: var(--color-error-light);
 }
+
+.btn.btn-success{
+    color: var(--color-success);
+    background: var(--color-success-light);
+}
+
+.btn.btn-success-solid{
+    color: #FFF;
+    background: var(--color-success);
+}
+
 .btn.btn-outline{
     color: var(--color-text);
     background: white;
