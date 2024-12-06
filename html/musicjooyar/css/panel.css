@@ -1282,7 +1282,7 @@ p.music-item-title .mj-close-circle {
     right: 5px;
     bottom: 5px;
     border-radius: 10px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-size: contain;
@@ -1298,6 +1298,10 @@ p.music-item-title .mj-close-circle {
     background: #ffffff70;
     border-radius: 10px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 

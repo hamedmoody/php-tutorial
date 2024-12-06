@@ -235,6 +235,6 @@ textarea.form-control:focus{
     transition: 0.3s;
 }
 
-.pagination a:hover {
+.pagination a:not(.current):hover {
     background: var(--color-info-light);
 }
