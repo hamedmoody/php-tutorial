@@ -1034,6 +1034,144 @@ p.music-item-title .mj-close-circle {
 
 /** Profile: End */
 
+/** Dashboard: Start **/
+
+
+.widget-stats {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    z-index: 9;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.stat {
+    border: 1px solid;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #FFF;
+    aspect-ratio: 1;
+}
+
+.stat i {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border: 4px solid rgb(255 255 255 / 30%);
+}
+
+.stat strong {
+    font-size: 28px;
+}
+
+.stat.stat-comments {
+    border-color: #FF5B7D;
+}
+
+.stat.stat-comments strong {
+    color: #FF5B7D;
+}
+
+.stat.stat-comments i {
+    background: rgb(255 91 125 / 30%);
+    color: #FF5B7D;
+}
+
+.stat span {
+    color: var(--color-text-light);
+}
+
+.stat.stat-artists {
+    border-color: var(--color-primary);
+}
+
+.stat.stat-artists i {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.stat.stat-artists strong {
+    color: var(--color-primary);
+}
+
+.stat.stat-musics {
+    border-color: #00AC28;
+}
+
+.stat.stat-musics i {
+    color: #00AC28;
+    background: rgb(0 172 40 / 30%);
+}
+
+.stat.stat-view {
+    border-color: #DF8703;
+}
+
+.stat.stat-musics strong {
+    color: #00AC28;
+}
+
+.stat.stat-view strong {
+    color: #DF8703;
+}
+
+.stat.stat-view i {
+    color: #DF8703;
+    background: rgb(223 135 3 / 30%);
+}
+
+.stat.stat-view:before, .stat.stat-view:after {
+    background: #DF8703;
+}
+
+.stat:before, .stat:after {
+    background: var(--color-primary);
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(25px);
+    bottom: 10px;
+}
+
+.stat:before {
+    left: 20px;
+}
+
+.stat:after {
+    right: 20px;
+}
+
+.stat.stat-comments:before,.stat.stat-comments:after {
+    background: #FF5B7D;
+}
+
+.stat.stat-musics:before, .stat.stat-musics:after {
+    background: #00AC28;
+}
+
+
+.view-chart {
+    background: #FFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/** Dashboard: End **/
+
 /** Artis: Start */
 .panel-main-content-cols {
     display: grid;
@@ -1161,5 +1299,7 @@ p.music-item-title .mj-close-circle {
     border-radius: 10px;
     color: black;
 }
+
+
 
 /** Artis: End */
