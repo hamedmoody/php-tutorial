@@ -381,6 +381,7 @@ section header i:after{
     margin-top: 35px;
     padding: 15px;
     position: relative;
+    color: var(--color-text);
 }
 
 .artists .artist img {
@@ -418,6 +419,43 @@ section header i:after{
 
 .artists .artist:after {
     right: 15px;
+}
+
+
+
+
+.artist-biography {
+    border-radius: 25px;
+    background: #FFF;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.artist-biography header {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    margin-top: -60px;
+    margin-bottom: 25px;
+}
+
+.artist-biography header img {
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    width: 128px;
+    height: 128px;
+}
+
+.biography-name {
+    padding-bottom: 10px;
+}
+
+.biography-name i {
+    color: var(--color-primary);
+}
+
+.biography-content p {
+    margin-bottom: 15px;
 }
 
 
