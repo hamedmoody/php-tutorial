@@ -1,0 +1,228 @@
+:root {
+    --color-primary: #735BFF;
+    --color-primary-light: #EAE6FF;
+    --color-accent: #AC4FFF;
+
+    --color-secondary: #729CFE;
+
+    --color-success: #00CE30;
+    --color-success-light: #E3FAE8;
+
+    --color-error: #CE0031;
+    --color-error-light: #FAE3E8;
+
+    --color-info: #0037CE;
+    --color-info-light: #E3E9FA;
+
+    --color-warning: #CEA500;
+    --color-warning-light: #FAF5E3;
+
+    --color-text: #242424;
+    --color-text-light: #A7A7A7;
+
+    --gradient-primary: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+strong{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: var(--color-primary)
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-size: 16px;
+    background: #ececec;
+    min-height: 100vh;
+}
+
+.flex-cc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-col{
+    flex-direction: column;
+}
+
+body,
+input,
+textarea,
+select,
+button{
+    font-family: YekanBakh, serif;
+    outline-style: none;
+}
+.ltr{
+    direction: ltr;
+    text-align: left;
+}
+.text-light{
+    color: var(--color-text-light);
+}
+/** Button: Start */
+.btn{
+    display: flex;
+    background: var( --gradient-primary );
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFF;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
+    outline-style: none;
+}
+.btn.btn-secondary {
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.btn.btn-delete{
+    color: var(--color-error);
+    background: var(--color-error-light);
+}
+.btn.btn-outline{
+    color: var(--color-text);
+    background: white;
+    border-color: #EEEEEE;
+}
+.btn-full{
+    width: 100%;
+}
+.btn:before{
+    content: "";
+    height: 16px;
+    background: url('../images/loading-spinner.svg') no-repeat center;
+    background-size: 100%;
+    width: 0;
+    transition: 0.3s;
+}
+.btn > i{
+    transition: 0.3s;
+}
+.btn.loading > i{
+    font-size: 0;
+}
+.btn.loading:before{
+    width: 16px;
+}
+.btn:disabled{
+    filter: grayscale(.5);
+    opacity: .7;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.form-group label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input.form-control,
+textarea.form-control,
+select.form-control{
+    border-radius: 10px;
+    border: 1px solid #CDCDCD;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    outline-style: none;
+    transition: 0.3s;
+}
+
+input:read-only{
+    background: #f6f6f6;
+}
+
+input.form-control:focus,
+textarea.form-control:focus{
+    border-color: var(--color-primary);
+}
+
+.form-group.has-unit {
+    position: relative;
+}
+
+.form-group.has-unit .unit {
+    position: absolute;
+    left: 6px;
+    bottom: 9px;
+    background: #EBEBEB;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+
+.input-error{
+    color: var(--color-error);
+    font-size: 15px;
+    padding: 5px;
+    display: none;
+}
+.form-group.error input{
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+.form-group.error .input-error{
+    display: block;
+}
+/** Button: End */
+
+.table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination {
+    direction: ltr;
+    display: flex;
+    position: relative;
+}
+
+.pagination > * {
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 200;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.pagination .current {
+    background: var(--gradient-primary);
+    color: #FFF;
+}
+
+.pagination .current:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: var(--color-primary);
+    z-index: -1;
+    filter: blur(10px);
+    position: absolute;
+    bottom: -9px;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background: var(--color-info-light);
+}
