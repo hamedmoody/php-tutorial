@@ -1307,3 +1307,46 @@ p.music-item-title .mj-close-circle {
 
 
 /** Artis: End */
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000004d;
+    z-index: 9;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-box {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    color: var(--color-error);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+audio#music-preview {
+    margin: 20px 0px 0;
+}
