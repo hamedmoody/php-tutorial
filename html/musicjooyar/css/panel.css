@@ -251,9 +251,20 @@ a.sidebar-logo img {
 main.main header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     padding: 10px;
     border-bottom: 1px solid #E3E3E3;
+}
+
+.panel-menu-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-menu-actions .btn {
+    padding: 6px 15px;
 }
 
 main.main header h1 {
