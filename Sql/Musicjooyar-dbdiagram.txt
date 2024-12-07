@@ -1,0 +1,121 @@
+Table users {
+  ID bigint [pk]
+  username varchar
+  password varchar
+  phone varchar
+  email varchar
+  first_name varchar
+  last_name varchaer
+  role varchar
+  avatar varchar
+  status varchar
+  last_login datetime
+  created_at datetime
+  updated_at datetime
+  deleted_at datetime
+  deleted_by bigint
+}
+
+Table musics{
+  ID bigint [pk]
+  title varchar
+  content text
+  author_id bigint
+  cover varchar
+  status varchar
+  comment_count int
+  quality_320 varchar
+  quality_128 varchar
+  view_count bingint
+  download_count bigint
+  created_at datetime
+  updated_at datetime
+}
+
+Table music_favorites{
+  user_id bigint
+  music_id bigint
+  created_at datetime
+}
+
+Table music_views{
+  music_id bigint
+  user_id bigint
+  ip varchar
+  created_at datetime
+}
+
+Table artists{
+  ID bingint [pk]
+  first_name varchar
+  last_name varchar
+  music_count int
+  avatar varchar
+  biography text
+  birthdate date
+  dead_date date
+  created_at datetime
+}
+
+Table music_artist{
+  music_id bigint
+  artist_id bigint
+}
+
+Table categories{
+  ID bigint [pk]
+  title varchar
+  parent bigint
+  created_at datetime
+}
+
+Table music_category{
+  music_id bigint
+  category_id bigint
+}
+
+Table comments{
+  ID bigint [pk]
+  parent_id bigint
+  user_id bigint
+  music_id bigint
+  comment text
+  status varchar
+  created_at datetime
+  updated_at datetime
+}
+
+Table comment_likes{
+  user_id bigint
+  comment_id bigint
+  like boolean
+  created_at datetime
+}
+
+Ref: "music_artist"."music_id" < "musics"."ID"
+
+Ref: "music_artist"."artist_id" < "artists"."ID"
+
+Ref: "music_category"."music_id" < "musics"."ID"
+
+Ref: "music_category"."category_id" < "categories"."ID"
+
+Ref: "musics"."author_id" < "users"."ID"
+
+Ref: "comments"."user_id" < "users"."ID"
+
+Ref: "comments"."parent_id" < "comments"."ID"
+
+Ref: "comments"."music_id" < "musics"."ID"
+
+Ref: "comment_likes"."user_id" < "users"."ID"
+
+Ref: "comment_likes"."comment_id" < "comments"."ID"
+
+Ref: "music_views"."user_id" < "users"."ID"
+
+Ref: "music_views"."music_id" < "musics"."ID"
+
+Ref: "music_favorites"."user_id" < "users"."ID"
+
+Ref: "music_favorites"."music_id" < "musics"."ID"
