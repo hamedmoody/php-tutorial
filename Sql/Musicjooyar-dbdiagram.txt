@@ -1,33 +1,33 @@
 Table users {
-  ID bigint [pk]
-  username varchar
-  password varchar
-  phone varchar
-  email varchar
-  first_name varchar
-  last_name varchaer
-  role varchar
+  ID bigint [pk,increment]
+  username varchar(40)
+  password varchar(40)
+  phone varchar(11)
+  email varchar(50)
+  first_name varchar(100)
+  last_name varchar(100)
+  role varchar(20)
   avatar varchar
-  status varchar
+  status varchar(20) [default: 'active']
   last_login datetime
   created_at datetime
   updated_at datetime
-  deleted_at datetime
-  deleted_by bigint
+  deleted_at datetime [default: null]
+  deleted_by bigint [default: null]
 }
 
 Table musics{
-  ID bigint [pk]
+  ID bigint [pk, increment]
   title varchar
   content text
   author_id bigint
   cover varchar
-  status varchar
-  comment_count int
+  status varchar(20) [default: 'draft']
+  comment_count int [default: 0]
   quality_320 varchar
   quality_128 varchar
-  view_count bingint
-  download_count bigint
+  view_count bigint [default: 0]
+  download_count bigint [default: 0]
   created_at datetime
   updated_at datetime
 }
@@ -40,20 +40,20 @@ Table music_favorites{
 
 Table music_views{
   music_id bigint
-  user_id bigint
-  ip varchar
+  user_id bigint [default: 0]
+  ip varchar(15)
   created_at datetime
 }
 
 Table artists{
-  ID bingint [pk]
-  first_name varchar
-  last_name varchar
-  music_count int
+  ID bigint [pk, increment]
+  first_name varchar(100)
+  last_name varchar(100)
+  music_count int [default: 0]
   avatar varchar
   biography text
   birthdate date
-  dead_date date
+  dead_date date [default: null]
   created_at datetime
 }
 
@@ -63,9 +63,9 @@ Table music_artist{
 }
 
 Table categories{
-  ID bigint [pk]
-  title varchar
-  parent bigint
+  ID bigint [pk, increment]
+  title varchar(100)
+  parent bigint [default: 0]
   created_at datetime
 }
 
@@ -75,12 +75,12 @@ Table music_category{
 }
 
 Table comments{
-  ID bigint [pk]
-  parent_id bigint
+  ID bigint [pk, increment]
+  parent_id bigint [default: 0]
   user_id bigint
   music_id bigint
   comment text
-  status varchar
+  status varchar [default: 'pending']
   created_at datetime
   updated_at datetime
 }
