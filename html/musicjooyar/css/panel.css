@@ -959,11 +959,11 @@ p.music-item-title .mj-close-circle {
     width: 300px;
 }
 
-.username-error {
+.field-exists {
     color: var(--color-error);
 }
 
-.username-success {
+.field-free {
     color: var(--color-success);
 }
 
@@ -973,25 +973,25 @@ p.music-item-title .mj-close-circle {
     gap: 4px;
     color: var(--color-text-light);
 }
-.username-check{
+.field-exists-check{
     margin-top: 10px;
 }
 
-.username-check div {
+.field-exists-check div {
     display: none;
     align-items: center;
     gap: 10px;
 }
 
-.username-check.checking .checking {
+.field-exists-check.checking .checking {
     display: flex;
 }
 
-.username-check.error .username-error {
+.field-exists-check.error .field-exists {
     display: flex;
 }
 
-.username-check.success .username-success {
+.field-exists-check.success .field-free {
     display: flex;
 }
 
