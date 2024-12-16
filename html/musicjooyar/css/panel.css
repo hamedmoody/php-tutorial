@@ -171,6 +171,10 @@ body{
     border-radius: 0 30px 30px 0;
 }
 
+.sidebar-logo {
+    margin: 15px 0;
+}
+
 .sidebar-header {
     text-align: center;
     display: flex;
