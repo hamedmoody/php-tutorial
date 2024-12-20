@@ -1319,7 +1319,9 @@ p.music-item-title .mj-close-circle {
     justify-content: center;
 }
 
-
+input#birthdate {
+    padding-left: 40px;
+}
 
 /** Artis: End */
 
