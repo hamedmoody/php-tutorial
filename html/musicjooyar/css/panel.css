@@ -781,6 +781,10 @@ label.cover-uploader p:not(.click-for-upload) {
     display: none;
 }
 
+.music-uploader.uploaded .upload-progress-bar{
+    display: none;
+}
+
 .music-uploader {
     position: relative;
 }
@@ -856,6 +860,7 @@ p.music-item-title .mj-close-circle {
 
 .music-uploader audio {
     width: 100%;
+    margin-top: 15px;
 }
 
 .upload-progress-bar {
