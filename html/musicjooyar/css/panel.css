@@ -438,11 +438,11 @@ main.main header i:after{
     border-radius: 50%;
 }
 
-span.comment-count.unread-comment {
+.comment-count.unread-comment {
     position: relative;
 }
 
-span.comment-count.unread-comment:before {
+.comment-count.unread-comment:before {
     content: "";
     width: 6px;
     height: 6px;
