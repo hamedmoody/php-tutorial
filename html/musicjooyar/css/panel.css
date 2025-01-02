@@ -557,6 +557,21 @@ main.main header i:after{
     background: #e6e6e6;
 }
 
+table.loading td {
+    position: relative;
+    height: 45px;
+}
+
+table.loading td:before {
+    content: "";
+    background: #e2e2e2;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    border-radius: 4px;
+}
 
 /** Table Start: End */
 
