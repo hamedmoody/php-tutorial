@@ -312,6 +312,18 @@ main.main header i:after{
     padding: 5px;
     border-radius: 10px;
     display: flex;
+    gap: 5px;
+}
+
+.form-filter .select2-container--default .select2-selection--single,
+.form-filter .select2-container--default .select2-selection--single .select2-selection__rendered,
+.form-filter .select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 30px ;
+    border: none;
+}
+
+.form-filter .select2-container--default .select2-selection--single{
+    min-width: 100px;
 }
 
 .form-filter label {
