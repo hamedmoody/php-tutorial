@@ -1431,3 +1431,35 @@ audio#music-preview {
     height: auto;
 }
 /** Panel Favorite:End **/
+
+/** Options: Start */
+#options fieldset {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #eaeaea;
+    background: #fdfdfd;
+    margin-bottom: 15px;
+}
+
+#options fieldset legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.options-cols {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.options-cols > div {
+    width: calc( 50% - 7.5px );
+}
+p.sms-option-info {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+/** Options: End */

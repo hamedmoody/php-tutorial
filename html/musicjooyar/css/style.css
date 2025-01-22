@@ -863,7 +863,7 @@ footer#footer > .container {
     justify-content: space-between;
 }
 
-footer#footer strong {
+footer#footer .designed-by a {
     font-weight: bold;
     color: var(--color-primary);
     text-shadow: 2px 6px 9px rgb(115 91 255 / 28%);
