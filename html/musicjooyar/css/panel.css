@@ -1455,7 +1455,7 @@ audio#music-preview {
 .options-cols > div {
     width: calc( 50% - 7.5px );
 }
-p.sms-option-info {
+.info-box {
     background: var(--color-primary-light);
     color: var(--color-primary);
     padding: 10px;
