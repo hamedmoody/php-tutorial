@@ -1,0 +1,84 @@
+###### List of Mod_Rewrite Variables: http://www.askapache.com/htaccess/mod_rewrite-variables-cheatsheet.html
+
+###HTTP header variables:
+#HTTP_USER_AGENT, HTTP_REFERER,
+#HTTP_COOKIE, HTTP_FORWARDED, HTTP_HOST, HTTP_PROXY_CONNECTION, HTTP_KEEP_ALIVE
+#HTTP_ACCEPT, HTTP_ACCEPT_CHARSET, HTTP_ACCEPT_ENCODING, HTTP_ACCEPT_LANGUAGE
+#HTTP_CACHE_CONTROL, HTTP_CONNECTION 
+
+###Connection & request variables:
+# REMOTE_ADDR, REMOTE_HOST, REMOTE_PORT, REMOTE_USER, REMOTE_IDENT 
+# REDIRECT_STATUS, REDIRECT_URL,  
+# THE_REQUEST REQUEST_URI, REQUEST_METHOD, REQUEST_FILENAME, REQUEST_METHOD, REQUEST_TIME 
+# SCRIPT_FILENAME, SCRIPT_NAME, PATH_INFO, QUERY_STRING, AUTH_TYPE
+
+#####Server internal variables:
+#DOCUMENT_ROOT, SERVER_ADMIN, SERVER_NAME, SERVER_ADDR, SERVER_PORT, SERVER_PROTOCOL, SERVER_SOFTWARE, SERVER_SIGNATURE
+
+#####System variables:
+#TIME_YEAR, TIME_MON, TIME_DAY, TIME_HOUR, TIME_MIN, TIME_SEC, TIME_WDAY, TIME
+
+
+
+###### RewriteCond Cheatsheet: http://www.askapache.com/htaccess/rewritecond-cheatsheet.html
+
+#Request to http://www.askapache.com/cg/rewrite-test/?catch=caught&this=that
+
+#RewriteCond %{THE_REQUEST} = GET /cgi-bin/php/pro/rewrite-test/?catch=caught&this=that HTTP/1.1
+#RewriteCond %{REQUEST_URI} = /cg/rewrite-test/?catch=caught&this=that
+#RewriteCond %{QUERY_STRING} = catch=caught&this=that
+#RewriteCond %{HTTP_HOST} = www.askapache.com
+#RewriteCond %{HTTP_USER_AGENT} = Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+#RewriteCond %{REMOTE_ADDR} = 8.8.8.8
+
+#RewriteCond %{AUTH_TYPE} = Digest
+#RewriteCond %{DOCUMENT_ROOT} = /h/ah/sites/askapache.com/htdocs
+#RewriteCond %{GATEWAY_INTERFACE} = CGI/1.1
+
+#RewriteCond %{HTTP_ACCEPT} = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+#RewriteCond %{HTTP_ACCEPT_ENCODING} = gzip, deflate
+#RewriteCond %{HTTP_ACCEPT_LANGUAGE} = en-us,en;q=0.5
+#RewriteCond %{HTTP_AUTHORIZATION} = Digest username="digadmin", realm="DA BOSS", nonce="lCVPJajA=f199ddfa972f92178d", uri="/cg/rewrite-test/?catch=caught&this=that", algorithm=MD5, response="e41b00258297d651a6", qop=auth, nc=00008, cnonce="169237"
+#RewriteCond %{HTTP_CONNECTION} = keep-alive
+#RewriteCond %{HTTP_HOST} = www.askapache.com
+#RewriteCond %{HTTP_UNIQUE_ID} = URxwkNBWnsAAAF0rGjsAAAAd
+#RewriteCond %{HTTP_USER_AGENT} = Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+#RewriteCond %{HTTP_COOKIE} = __utmc=110037338; __utmb=110037338.14.10.1360812961
+
+#RewriteCond %{TIME} = 20130214001610
+#RewriteCond %{TIME_DAY} = 14
+#RewriteCond %{TIME_HOUR} = 00
+#RewriteCond %{TIME_MIN} = 16
+#RewriteCond %{TIME_MON} = 02
+#RewriteCond %{TIME_SEC} = 10
+#RewriteCond %{TIME_WDAY} = 4
+#RewriteCond %{TIME_YEAR} = 2013
+
+#RewriteCond %{PATH} = /bin:/usr/bin
+#RewriteCond %{PHPRC} = /h/ah/sites/askapache.com/inc
+#RewriteCond %{PHP_AUTH_DIGEST} = username="digadmin", realm="DA BOSS", nonce="lCVPJajA=f199ddfa972f92178d", uri="/cg/rewrite-test/?catch=caught&this=that", algorithm=MD5, response="e41b00258297d651a6", qop=auth, nc=00008, cnonce="169237"
+#RewriteCond %{PHP_SELF} = /cg/rewrite-test/index.php
+#RewriteCond %{REDIRECT_STATUS} = 200
+
+#RewriteCond %{REMOTE_ADDR} = 8.8.8.8
+#RewriteCond %{REMOTE_PORT} = 54853
+#RewriteCond %{REMOTE_USER} = digadmin
+
+#RewriteCond %{REQUEST_METHOD} = GET
+#RewriteCond %{REQUEST_PROTOCOL} = HTTP/1.1
+#RewriteCond %{REQUEST_TIME} = 1360818320
+#RewriteCond %{REQUEST_TIME_FLOAT} = 1360818320.6224
+#RewriteCond %{REQUEST_URI} = /cg/rewrite-test/?catch=caught&this=that
+#RewriteCond %{REQUEST_FILENAME} = /h/ah/sites/askapache.com/cg/rewrite-test/index.php
+
+#RewriteCond %{SCRIPT_FILENAME} = /h/ah/sites/askapache.com/cg/rewrite-test/index.php
+#RewriteCond %{SCRIPT_NAME} = /cg/rewrite-test/index.php
+
+#RewriteCond %{SERVER_ADDR} = 208.86.158.195
+#RewriteCond %{SERVER_ADMIN} = webmaster@askapache.com
+#RewriteCond %{SERVER_NAME} = www.askapache.com
+#RewriteCond %{SERVER_PORT} = 80
+#RewriteCond %{SERVER_PROTOCOL} = HTTP/1.1
+#RewriteCond %{SERVER_SIGNATURE} = <address>Apache Server at www.askapache.com Port 80</address>
+#RewriteCond %{SERVER_SOFTWARE} = Apache
+#RewriteCond %{UNIQUE_ID} = URxwkNBWnsAAAF0rGjsAAAAd
