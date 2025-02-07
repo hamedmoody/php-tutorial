@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'musicjooyar';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/musicjooyar.eot?d78e0239430ef6cb1625420c44d8a9f4?#iefix") format("embedded-opentype"),
+url("../fonts/musicjooyar.woff2?d78e0239430ef6cb1625420c44d8a9f4") format("woff2"),
+url("../fonts/musicjooyar.woff?d78e0239430ef6cb1625420c44d8a9f4") format("woff");
+}
+
+.mj, .mj-icons {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.mj-icons {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  fill: currentColor;
+}
+
+.mj {
+  font-family: 'musicjooyar';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.mj-arrow-down:before { content: "\f101"; }
+.mj-arrow-head-down:before { content: "\f102"; }
+.mj-arrow-head-left:before { content: "\f103"; }
+.mj-arrow-head-right:before { content: "\f104"; }
+.mj-arrow-head-up:before { content: "\f105"; }
+.mj-arrow-left:before { content: "\f106"; }
+.mj-arrow-reply:before { content: "\f107"; }
+.mj-arrow-right:before { content: "\f108"; }
+.mj-arrow-up:before { content: "\f109"; }
+.mj-calendar-edit:before { content: "\f10a"; }
+.mj-category:before { content: "\f10b"; }
+.mj-close-circle:before { content: "\f10c"; }
+.mj-close:before { content: "\f10d"; }
+.mj-edit-2:before { content: "\f10e"; }
+.mj-element-3:before { content: "\f10f"; }
+.mj-eye:before { content: "\f110"; }
+.mj-filter:before { content: "\f111"; }
+.mj-heart-filled:before { content: "\f112"; }
+.mj-heart-tick:before { content: "\f113"; }
+.mj-heart:before { content: "\f114"; }
+.mj-image:before { content: "\f115"; }
+.mj-like-1:before { content: "\f116"; }
+.mj-logout:before { content: "\f117"; }
+.mj-message-text:before { content: "\f118"; }
+.mj-message:before { content: "\f119"; }
+.mj-microphone-2:before { content: "\f11a"; }
+.mj-music:before { content: "\f11b"; }
+.mj-musicjooyar:before { content: "\f11c"; }
+.mj-pause:before { content: "\f11d"; }
+.mj-play-simple:before { content: "\f11e"; }
+.mj-play:before { content: "\f11f"; }
+.mj-profile-tick:before { content: "\f120"; }
+.mj-refresh:before { content: "\f121"; }
+.mj-repeat-one:before { content: "\f122"; }
+.mj-search-normal-1:before { content: "\f123"; }
+.mj-setting-3:before { content: "\f124"; }
+.mj-Telegram:before { content: "\f125"; }
+.mj-tick-circle:before { content: "\f126"; }
+.mj-timer-1:before { content: "\f127"; }
+.mj-trash:before { content: "\f128"; }
+.mj-user:before { content: "\f129"; }
+.mj-volume-cross:before { content: "\f12a"; }
+.mj-volume-high:before { content: "\f12b"; }
+.mj-warning-2:before { content: "\f12c"; }
+.mj-web:before { content: "\f12d"; }
