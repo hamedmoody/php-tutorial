@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'musicjooyar';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/musicjooyar.eot?22d7ca4053b115c012fb127fd04e8df2?#iefix") format("embedded-opentype"),
+  url("../fonts/musicjooyar.woff2?22d7ca4053b115c012fb127fd04e8df2") format("woff2"),
+  url("../fonts/musicjooyar.woff?22d7ca4053b115c012fb127fd04e8df2") format("woff");
+}
+
+.mj, .mj-icons {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.mj-icons {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  fill: currentColor;
+}
+
+.mj {
+  font-family: 'musicjooyar';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.mj-arrow-down:before { content: "\f101"; }
+.mj-arrow-head-down:before { content: "\f102"; }
+.mj-arrow-head-left:before { content: "\f103"; }
+.mj-arrow-head-right:before { content: "\f104"; }
+.mj-arrow-head-up:before { content: "\f105"; }
+.mj-arrow-left:before { content: "\f106"; }
+.mj-arrow-reply:before { content: "\f107"; }
+.mj-arrow-right:before { content: "\f108"; }
+.mj-arrow-up:before { content: "\f109"; }
+.mj-attention-circle:before { content: "\f10a"; }
+.mj-award:before { content: "\f10b"; }
+.mj-calendar-edit:before { content: "\f10c"; }
+.mj-cart-add:before { content: "\f10d"; }
+.mj-cart-fill:before { content: "\f10e"; }
+.mj-cart:before { content: "\f10f"; }
+.mj-category:before { content: "\f110"; }
+.mj-close-circle:before { content: "\f111"; }
+.mj-close:before { content: "\f112"; }
+.mj-dislike-1:before { content: "\f113"; }
+.mj-download:before { content: "\f114"; }
+.mj-edit-2:before { content: "\f115"; }
+.mj-element-3:before { content: "\f116"; }
+.mj-eye:before { content: "\f117"; }
+.mj-filter:before { content: "\f118"; }
+.mj-heart-filled:before { content: "\f119"; }
+.mj-heart-tick:before { content: "\f11a"; }
+.mj-heart:before { content: "\f11b"; }
+.mj-image:before { content: "\f11c"; }
+.mj-information:before { content: "\f11d"; }
+.mj-like-1:before { content: "\f11e"; }
+.mj-logout:before { content: "\f11f"; }
+.mj-medal-star-broken:before { content: "\f120"; }
+.mj-medal-star:before { content: "\f121"; }
+.mj-message-question:before { content: "\f122"; }
+.mj-message-text:before { content: "\f123"; }
+.mj-message:before { content: "\f124"; }
+.mj-microphone-2:before { content: "\f125"; }
+.mj-monitor:before { content: "\f126"; }
+.mj-music:before { content: "\f127"; }
+.mj-musicjooyar:before { content: "\f128"; }
+.mj-pause:before { content: "\f129"; }
+.mj-play-simple:before { content: "\f12a"; }
+.mj-play:before { content: "\f12b"; }
+.mj-profile-tick:before { content: "\f12c"; }
+.mj-refresh:before { content: "\f12d"; }
+.mj-repeat-one:before { content: "\f12e"; }
+.mj-search-normal-1:before { content: "\f12f"; }
+.mj-setting-2:before { content: "\f130"; }
+.mj-setting-3:before { content: "\f131"; }
+.mj-star-filled:before { content: "\f132"; }
+.mj-star-half:before { content: "\f133"; }
+.mj-star:before { content: "\f134"; }
+.mj-task-square:before { content: "\f135"; }
+.mj-teacher:before { content: "\f136"; }
+.mj-Telegram:before { content: "\f137"; }
+.mj-tick-circle:before { content: "\f138"; }
+.mj-timer-1:before { content: "\f139"; }
+.mj-trash:before { content: "\f13a"; }
+.mj-user:before { content: "\f13b"; }
+.mj-verify:before { content: "\f13c"; }
+.mj-volume-cross:before { content: "\f13d"; }
+.mj-volume-high:before { content: "\f13e"; }
+.mj-warning-2:before { content: "\f13f"; }
+.mj-warning:before { content: "\f140"; }
+.mj-web:before { content: "\f141"; }
