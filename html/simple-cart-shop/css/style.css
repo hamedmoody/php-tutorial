@@ -313,6 +313,8 @@ a.cart-btn span {
     background: #FFF;
     padding: 15px;
     border-radius: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
 .widget h2 {
@@ -446,3 +448,97 @@ a.cart-btn span {
 }
 
 /** Cart: End **/
+.cart-success{
+    margin-top: 15px;
+}
+
+.cart-message {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+.cart-message i {
+    font-size: 92px;
+}
+
+.cart-message.success h1,.cart-message.success i {
+    color: #4caf50;
+}
+.cart-message.error h1,.cart-message-error i {
+    color: #e91e63;
+}
+
+
+.table {
+    width: 100%;
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+.table th {
+    color: gray;
+}
+
+.table tbody tr:nth-child(even) td {
+    background: #f4f4f4;
+}
+
+.table td {
+    padding: 10px;
+}
+
+.table tr td:first-child {
+    border-radius: 0 10px 10px 0;
+}
+.table tr td:last-child {
+    border-radius:  10px 0 0 10px;
+}
+
+.table .product-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table .product-title img {
+    border-radius: 5px;
+}
+
+.product{
+    margin-top: 15px;
+}
+
+.product h1{
+    font-size: 28px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 30px;
+    align-items: center;
+}
+
+.add-box {
+    display: flex;
+    gap: 10px;
+}
+
+.add-box .btn {
+    margin: 0;
+}
+
+.add-box input {
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+}
+
+.detail-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
