@@ -120,6 +120,9 @@ button{
     filter: grayscale(.5);
     opacity: .7;
 }
+.btn.btn-success:before{
+    background-image: url('../images/spinner-primary.svg');
+}
 .form-group{
     margin-bottom: 10px;
 }
@@ -541,4 +544,85 @@ a.cart-btn span {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.cart-btn-wrapper {
+    position: relative;
+}
+
+.cart-hover {
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: calc( 100% + 6px );
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ebe9e9;
+    transform: translateY(15px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.cart-hover:before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 8px;
+    border: 6px solid transparent;
+    border-bottom-color: #d5d5d5;
+}
+
+.cart-hover:after {
+    content: "";
+    left: 0;
+    top: -30px;
+    height: 30px;
+    right: 0;
+    position: absolute;
+}
+
+.cart-btn-wrapper:hover .cart-hover{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.cart-hover-item {
+    display: grid;
+    grid-template-columns: auto 120px 32px;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cart-hover-item > *:not(:first-child) {
+    text-align: center;
+}
+
+.cart-hover-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+
+}
+
+.cart-hover-item:nth-child(even) {
+    background: #eeeeee;
+}
+
+.cart-hover-item i {
+    color: var(--color-error);
+}
+
+.cart-hover-item ins {
+    text-decoration: none;
+    color: var(--color-success);
+}
+
+.cart-hover-item ins span {
+    font-size: 13px;
+    color: #c5c0c0;
 }
