@@ -203,7 +203,7 @@ a{
 }
 
 a.logo {
-    height: 56px;
+    height: 50px;
     width: auto;
 }
 
@@ -548,6 +548,41 @@ a.cart-btn span {
 
 .cart-btn-wrapper {
     position: relative;
+}
+
+p.product-price del {
+    text-decoration: none;
+    color: var(--color-error);
+    position: relative;
+}
+
+p.product-price del:before {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 8px;
+    position: absolute;
+    height: 1px;
+    background: var(--color-error);
+    transform: rotate(-13deg);
+}
+
+p.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+p.product-price ins {
+    color: var(--color-success);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p.product-price span {
+    font-size: 14px;
+    color: gray;
 }
 
 .cart-hover {
