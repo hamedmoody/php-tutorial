@@ -233,6 +233,10 @@ a.cart-btn span {
 }
 
 /* Card: Start */
+#product-list-container{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 .product-list {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -250,6 +254,24 @@ a.cart-btn span {
     background: #FFF;
     border-radius: 15px;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    position: relative;
+}
+
+.countdown {
+
+    background: rgb(24 205 0 / 10%);
+    padding: 1px 10px;
+    color: rgb(24 205 0);
+    border-radius: 5px;
+    display: inline-flex;
+}
+
+.product-list .product .countdown {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    text-align: center;
 }
 
 .product h2 {
