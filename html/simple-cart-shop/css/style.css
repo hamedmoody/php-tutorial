@@ -340,6 +340,9 @@ a.cart-btn span {
 .reload-cart-shop {
     cursor: pointer;
     color: var(--color-primary);
+}
+
+.reload-cart-shop.loading{
     animation: spin 1s infinite linear reverse;
 }
 
