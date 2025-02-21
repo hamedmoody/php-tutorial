@@ -257,6 +257,13 @@ a.cart-btn span {
     position: relative;
 }
 
+.discount-percent {
+    background: red;
+    color: #FFF !important;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
 .countdown {
 
     background: rgb(24 205 0 / 10%);
@@ -272,6 +279,7 @@ a.cart-btn span {
     right: 10px;
     top: 10px;
     text-align: center;
+    display: block;
 }
 
 .product h2 {
@@ -514,7 +522,7 @@ a.cart-btn span {
 .cart-message.success h1,.cart-message.success i {
     color: #4caf50;
 }
-.cart-message.error h1,.cart-message-error i {
+.cart-message.error h1,.cart-message.error i {
     color: #e91e63;
 }
 
@@ -643,6 +651,7 @@ p.product-price span {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-out;
+    z-index: 9;
 }
 
 .cart-hover:before {
