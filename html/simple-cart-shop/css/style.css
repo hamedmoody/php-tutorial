@@ -265,8 +265,7 @@ a.cart-btn span {
 }
 
 .countdown {
-
-    background: rgb(24 205 0 / 10%);
+    background: rgb(231 250 229);
     padding: 1px 10px;
     color: rgb(24 205 0);
     border-radius: 5px;
@@ -284,9 +283,14 @@ a.cart-btn span {
 
 .product h2 {
     font-size: 18px;
-    height: 57px;
+    height: 81px;
     margin-bottom: 15px;
     padding: 0 10px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .price {
