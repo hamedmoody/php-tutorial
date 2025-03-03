@@ -384,6 +384,11 @@ a.cart-btn span {
     margin-top: 15px;
 }
 
+.no-cart-items {
+    text-align: center;
+    padding: 15px;
+}
+
 .cart-item {
     display: grid;
     grid-template-columns: 32px auto 300px 100px 45px;
