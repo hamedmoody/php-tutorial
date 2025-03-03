@@ -719,3 +719,8 @@ p.product-price span {
     font-size: 13px;
     color: #c5c0c0;
 }
+
+
+.not-found{
+    margin-top: 25px;
+}
