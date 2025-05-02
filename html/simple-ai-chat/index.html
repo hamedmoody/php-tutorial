@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Ai Api</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="conversations">
+            <div class="chat user">
+                <img src="Moodilearn.png" alt="" width="24" height="24">
+                <div class="chat-content">
+                    سلام و عرض ادب
+                </div>
+            </div>
+            <div class="chat model">
+                <img src="Moodilearn.png" alt="" width="24" height="24">
+                <div class="chat-content">
+                    سلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادب
+                    سلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادب
+                    سلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادب
+                    سلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادب
+                    سلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادبسلام و عرض ادب
+                </div>
+            </div>
+        </div>
+        <form class="form-group" id="chat-form">
+            <div class="container">
+                <textarea class="question form-control" rows="1" id="question" name="question" placeholder="سوال خود را بپرسید"></textarea>
+                <button class="btn btn-primary mt-2">
+                    ارسال
+                </button>
+            </div>
+        </form>
+        
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="marked.min.js"></script><!--https://github.com/markedjs/marked-->
+    <script>
+        jQuery(document).ready(function( $ ){
+            $('form').submit(function(e){
+
+                e.preventDefault();
+
+                let question        = $('textarea').val();
+
+                let file            = $('#file')[0].files[0];
+
+                let data            = new FormData();
+                data.append('text', question);
+                data.append('file', file);
+
+
+                let last_length = 0;
+                let last_time   = Date.now();
+                $.ajax({
+                    url         : '',
+                    type        : 'POST',
+                    cache       : false,
+                    contentType : false,
+                    processData : false,
+                    data        : data,
+                    xhr         : function(){
+                        let xhr = $.ajaxSettings.xhr();
+
+                        xhr.onprogress = function( e ){
+
+                            if( ! last_length ){
+                                $('.response-box').addClass('show');
+                                let response_time = Math.round( (Date.now() - last_time) / 1000 );
+                                $('.response').text('');
+                                $('.response-duration').text( response_time + ' ثانیه' );
+                            }
+
+                            let response    = e.currentTarget.response;
+
+                            let chunks      = response.split( '<--my-event-delimiter-->' ).filter( function( line ){
+                                return line.trim().length;
+                            } );
+
+                            let final_response  = '';
+                            chunks.forEach( function( chunk ){
+                                let chunk_data  = chunk.substring( 6 );
+                                let chunk_json  = JSON.parse( chunk_data );
+                                let current_text = chunk_json.candidates[0].content.parts[0].text;
+                                final_response+= current_text;
+                            } );
+
+                            $('.response').html(
+                                marked.parse( final_response )
+                            );
+
+                        }
+
+                        return xhr;
+                    },
+                    beforeSend  : function(){
+                        $('button').addClass('loading');
+                    },
+                    complete    : function(){
+                        $('button').removeClass('loading');
+                    },
+                    success     : function( result ){
+
+                    },
+                });
+
+            });
+        });
+    </script>
+</body>
+</html>
