@@ -1,0 +1,279 @@
+:root {
+    --color-attention: #8500D2;
+    --color-primary: #0575E6;
+    --color-link: #0071DC;
+    --color-success: #0EB582;
+    --color-error: #FF0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh;
+    font-size: 16px;
+    background: #ececec;
+
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.main-col{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 75% calc( 25% - 15px );
+}
+
+h1{
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.blog {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    border-radius: 8px;
+    background: white;
+}
+
+
+.body-container{
+    padding: 15px;
+}
+.blog video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0 ;
+}
+
+.blog img{
+    max-width: 100%;
+}
+
+.blog p{
+    margin-bottom: 20px;
+    line-height: 200%;
+}
+
+.sidebar img{
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar img:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.sidebar .banners{
+    position: sticky;
+    top: 15px;
+}
+
+nav.nav {
+    background: #FFF;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background: #ededed;
+}
+
+footer#footer {
+    background: #FFF;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.page-404 {
+    text-align: center;
+    font-size: 64px;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9b9b9b;
+}
+
+
+div#cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #FFF;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.card-course{
+    margin-top: 60px;
+}
+
+.card picture {
+    margin: -12px -12px 0 -12px;
+    display: block;
+}
+
+.card picture img {
+    border-radius: 20px 20px 0 0;
+    height: auto;
+}
+
+.card-course picture img{
+    border-radius: 20px;
+    max-width: calc( 100% - 23px );
+    display: block;
+    margin: -60px auto 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 550;
+    height: 60px;
+    overflow: hidden;
+}
+
+.card .card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.card .card-row p {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.card strong {
+    display: flex;
+}
+
+ins {
+    color: var(--color-success);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p.card-course-price span {
+    color: var(--color-success);
+    font-size: 14px;
+}
+
+del {
+    text-decoration: none;
+    color: var(--color-error);
+    position: relative;
+    margin-left: 4px;
+}
+
+del:before {
+    content: "";
+    background: red;
+    height: 1px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 40%;
+    transform: rotate(-18deg);
+}
+
+p.card-course-old-price span {
+    background: var(--color-error);
+    color: #FFF;
+    padding: 0 3px;
+    border-radius: 6px;
+}
+
+.card footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px dashed #E6E6E6;
+    padding-top: 10px;
+}
+
+.price-box {
+    background: #FFF;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.price .discount {
+    background: var(--color-error);
+    color: #FFF;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.sale-price {
+    margin: 10px 0;
+}
+
+.price-box > p {
+    text-align: right;
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.price-box p.card-course-duration {
+    margin-bottom: 20px;
+}
+
+a.add-to-cart {
+    background: var(--color-success);
+    color: #FFF;
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
