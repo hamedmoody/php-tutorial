@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 14, 2025 at 05:31 PM
+-- Generation Time: May 25, 2025 at 04:05 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -27,14 +27,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `courses`
 --
 
-DROP TABLE IF EXISTS `courses`;
 CREATE TABLE `courses` (
   `ID` bigint UNSIGNED NOT NULL,
-  `title` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `thumbnail` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `teacher` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `thumbnail` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `teacher` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `duration` int UNSIGNED NOT NULL,
   `price` bigint UNSIGNED NOT NULL,
   `sale_price` bigint UNSIGNED NOT NULL,
@@ -100,6 +99,31 @@ INSERT INTO `courses` (`ID`, `title`, `status`, `content`, `thumbnail`, `teacher
 (49, 'آموزش لینوکس از صفر تا حرفه‌ای: دوره جامع برای ورود به دنیای Linux', 'publish', 'دنیای لینوکس به عنوان یکی از محبوب‌ترین و پرکاربردترین سیستم‌عامل‌های متن‌باز جهان، توجه بسیاری از کاربران و توسعه‌دهندگان را به خود جلب کرده است. اما چرا باید به دنیای لینوکس وارد شویم؟ در این دوره آموزشی، به طور کامل با لینوکس و نحوه شروع کار با آن آشنا خواهیم شد.', 'https://www.daneshjooyar.com/wp-content/uploads/2024/08/Linuxx-min.jpg', 'مجتبی قدیمی', 54002, 29000000, 17400000, 0, 0, '2024-09-30 05:27:00', '2024-09-30 05:27:00'),
 (50, 'دوره جامع طراحی سایت با PHP(مقدماتی تا پیشرفته)', 'publish', 'زبان PHP به عنوان پر استفاده ترین و شناخته شده ترین زبان در حوزه طراحی وب هست بطوریکه بیش از 75% از جمله دیجیکالا، فیسبوک، ویکیپدیا و وردپرس با این زبان طراحی شده است و قراره تو این دوره اینقدر مسلط بشیم که یکی شبیه این سایت ها رو طراحی کنیم', 'https://www.daneshjooyar.com/wp-content/uploads/2024/06/php-beginner-to-advanced.jpg', 'حامد مودی', 619214, 79000000, 15800000, 0, 0, '2024-09-09 13:30:00', '2024-09-09 13:30:00');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `ID` bigint UNSIGNED NOT NULL,
+  `username` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `course_count` smallint UNSIGNED NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `username`, `first_name`, `last_name`, `phone`, `avatar`, `course_count`, `created_at`) VALUES
+(1, 'hamedmoody', 'حامد', 'مودی', '09123456789', 'https://www.daneshjooyar.com/wp-content/uploads/2024/05/6649cab1b3e43.jpg', 0, '2025-05-25 04:01:22'),
+(2, 'alirezaahmadi', 'علیرضا', 'احمدی', '09152364789', 'https://www.daneshjooyar.com/wp-content/uploads/2024/01/65adc322b066e.jpg', 0, '2025-05-25 04:03:04');
+
 --
 -- Indexes for dumped tables
 --
@@ -111,6 +135,12 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -119,6 +149,12 @@ ALTER TABLE `courses`
 --
 ALTER TABLE `courses`
   MODIFY `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `ID` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
