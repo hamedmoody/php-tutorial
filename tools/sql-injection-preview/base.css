@@ -43,6 +43,12 @@ body{
     min-height: 100vh;
 }
 
+.container{
+    max-width: 95%;
+    margin: auto;
+    width: 1200px;
+}
+
 .flex-cc{
     display: flex;
     align-items: center;
