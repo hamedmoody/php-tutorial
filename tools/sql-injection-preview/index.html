@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQL Injection Preview</title>
+    <link rel="stylesheet" href="default.min.css">
+    <script src="highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="sql.min.js"></script>
+    <link rel="stylesheet" href="https://dl.daneshjooyar.com/mvie/Moodi_Hamed/assets/css/font-yekanbakh-vf.css">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="username">نام کاربری</label>
+                <input type="text" id="username" name="input" class="form-control ltr" value="ali">
+            </div>
+            <div class="form-group">
+                <label for="password">کلمه عبور</label>
+                <input type="text" id="password" name="password" class="form-control ltr" value="123456">
+            </div>
+            <div class="form-group">
+                <label for="code">کد</label>
+                    <textarea class="form-control ltr" rows="5" id="code" name="code">SELECT * FROM users WHERE username = '$username' AND password = '$password'</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">
+                    کلیک کنید
+                </button>
+            </div>
+            <pre class="result ltr">
+
+            </pre>
+        </form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e){
+            e.preventDefault();
+            const username = document.querySelector('#username').value;
+            const password = document.querySelector('#password').value;
+            let code = document.querySelector('textarea').value;
+            code = code.replace('$username', username);
+            code = code.replace('$password', password);
+            const highlightedCode = hljs.highlight(
+                code,
+                { language: 'sql' }
+            ).value
+            console.log(highlightedCode)
+            document.querySelector('.result').innerHTML = highlightedCode
+        });
+    </script>
+</body>
+</html>
